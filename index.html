@@ -1,152 +1,178 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GoKiteJeri · Escola de Kitesurf em Jericoacoara</title>
-  <meta name="description" content="Aulas de kitesurf em Jericoacoara. Instrutor certificado. Equipamento incluso, método claro e vibe boa." />
-  <meta name="keywords" content="kitesurf Jericoacoara, aulas de kitesurf, GoKiteJeri, kite school Jeri, cursos de kitesurf" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>GoKiteJeri – Escola de Kitesurf em Jericoacoara</title>
+  <meta name="description" content="Aulas de kitesurf em Jericoacoara. Programa intensivo de 3 dias (3h/dia), aulas privadas com rádio. Equipamento incluído.">
+  <link rel="preload" href="assets/img/hero.jpg" as="image">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <!-- HEADER -->
+
+  <!-- NAV -->
   <header class="nav">
     <div class="container nav-inner">
-      <div class="brand">
-        <img src="assets/img/logo.jpg" alt="GoKiteJeri" class="logo" />
-      </div>
-      <nav>
+      <a href="#" class="brand" aria-label="GoKiteJeri">
+        <img src="assets/img/logo.jpg" alt="GoKiteJeri" style="height:32px;border-radius:6px">
+      </a>
+
+      <nav class="menu">
         <a href="#sobre">Sobre</a>
-        <a href="#aulas">Aulas</a>
         <a href="#preco">Preço</a>
         <a href="#galeria">Galeria</a>
-        <a href="#contato" class="cta-link">Contato</a>
+        <a href="#contato">Contato</a>
       </nav>
+
+      <div class="language-switch" aria-label="language switch">
+        <button data-lang="pt" class="active">🇧🇷 PT</button>
+        <button data-lang="en">🇺🇸 EN</button>
+      </div>
     </div>
   </header>
 
   <!-- HERO -->
-  <section class="hero" style="background-image: url('assets/img/hero.jpg');">
+  <section class="hero">
     <div class="hero-content">
-      <h1>Kitesurf em Jericoacoara 🌴</h1>
-      <p>Segurança, progresso e vibe boa. Aulas 1:1 e em dupla com foco total no aluno. <br>Atendemos em PT · ES · EN.</p>
-      <a href="https://wa.me/34616843816" class="btn">Falar no WhatsApp</a>
-      <a href="#aulas" class="btn btn-clear">Ver opções</a>
-    </div>
-  </section>
-
-  <!-- SOBRE -->
-  <section id="sobre" class="section">
-    <div class="container grid two">
-      <div>
-        <h2>Sobre a GoKiteJeri</h2>
-        <ul>
-          <li>✅ Aulas para iniciantes e intermediários</li>
-          <li>🎥 Feedback claro (quando possível, vídeo-análise)</li>
-          <li>🌬️ Vento constante e água quente</li>
-          <li>🏄 Equipamento incluso e briefing de segurança</li>
-        </ul>
+      <div class="lang lang-pt active">
+        <h1>Kitesurf em Jericoacoara</h1>
+        <p>Segurança, progresso e vibe boa. Aulas privadas 1:1 ou em dupla, com rádio e análise. <br>Falamos PT · ES · EN.</p>
+        <a class="btn" href="https://wa.me/34616843816?text=Ol%C3%A1%20GoKiteJeri!%20Quero%20info%20do%20curso%203%20dias." target="_blank" rel="noopener">Falar no WhatsApp</a>
       </div>
-      <div class="card highlight">
-        <h3>Pronto para começar?</h3>
-        <p>Mande um “Oi” no WhatsApp e receba um plano de aula personalizado conforme seu nível e objetivo.</p>
-        <a href="https://wa.me/34616843816" class="btn btn-whatsapp">Falar no WhatsApp</a>
+
+      <div class="lang lang-en">
+        <h1>Kitesurf in Jericoacoara</h1>
+        <p>Safety, progress and great vibes. Private 1:1 or shared lessons, with radio support and analysis. <br>We speak PT · ES · EN.</p>
+        <a class="btn" href="https://wa.me/34616843816?text=Hi%20GoKiteJeri!%20I%27d%20like%20info%20about%20the%203-day%20course." target="_blank" rel="noopener">Chat on WhatsApp</a>
       </div>
     </div>
   </section>
 
-  <!-- AULAS -->
-  <section id="aulas" class="section alt">
-    <div class="container">
-      <h2>Aulas & Cursos</h2>
-      <div class="grid three">
-        <div class="card">
-          <h3>Iniciante Zero → Rider</h3>
-          <ul>
-            <li>Controle do kite, body drag, water start</li>
-            <li>2–3h por sessão</li>
-            <li>Equipamento incluso</li>
-            <li>Briefing de segurança e vento</li>
-          </ul>
+  <main>
+    <!-- SOBRE / ABOUT -->
+    <section id="sobre" class="section">
+      <div class="container lead">
+        <div class="box">
+          <div class="lang lang-pt active">
+            <h2 class="mt-0">Sobre a escola</h2>
+            <p>GoKiteJeri é uma escola local liderada pelo instrutor Igor. Foco total em segurança e progresso real, com metodologia clara e suporte por rádio. Lagoa, mar e downwinds sob demanda.</p>
+            <ul class="clean">
+              <li><span class="badge">✅</span> Aulas 1:1 ou 2:1</li>
+              <li><span class="badge">✅</span> Rádio &amp; análise de técnica</li>
+              <li><span class="badge">✅</span> Equipamento incluído</li>
+              <li><span class="badge">✅</span> Spot perfeito: Jericoacoara</li>
+            </ul>
+          </div>
+          <div class="lang lang-en">
+            <h2 class="mt-0">About the school</h2>
+            <p>GoKiteJeri is a local school led by instructor Igor. We focus on safety and real progress, with a clear methodology and radio support. Lagoon, sea and downwinds on demand.</p>
+            <ul class="clean">
+              <li><span class="badge">✅</span> 1:1 or 2:1 lessons</li>
+              <li><span class="badge">✅</span> Radio &amp; technique analysis</li>
+              <li><span class="badge">✅</span> Equipment included</li>
+              <li><span class="badge">✅</span> Perfect spot: Jericoacoara</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="card">
-          <h3>Intermediário & Progressão</h3>
-          <ul>
-            <li>Upwind, transições, controle de velocidade e postura</li>
-            <li>1:1 ou em dupla</li>
-            <li>Feedback objetivo</li>
-            <li>Plano de evolução</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Coaching & Vídeo-Análise</h3>
-          <ul>
-            <li>Análise de manobras e correções finas</li>
-            <li>Metas claras</li>
-            <li>Recomendações de equipamento</li>
-          </ul>
+        <div class="box">
+          <div class="lang lang-pt active">
+            <h3 class="mt-0">Localização</h3>
+            <p>Jericoacoara, Brasil</p>
+            <small>Encontre-nos no Google Maps: “GoKiteJeri – Escola de Kitesurf Jericoacoara”.</small>
+          </div>
+          <div class="lang lang-en">
+            <h3 class="mt-0">Location</h3>
+            <p>Jericoacoara, Brazil</p>
+            <small>Find us on Google Maps: “GoKiteJeri – Escola de Kitesurf Jericoacoara”.</small>
+          </div>
         </div>
       </div>
-      <p class="note">* No momento não oferecemos translado de buggy. O deslocamento até o spot é combinado conforme necessidade.</p>
-    </div>
-  </section>
+    </section>
 
-  <!-- PREÇO -->
-  <section id="preco" class="section">
+    <!-- PREÇO / PRICES -->
+    <section id="preco" class="section">
+      <div class="container">
+        <div class="price-banner">
+          <div class="lang lang-pt active">
+            <h2 class="mt-0 mb-0">Pacote Intensivo — 3 dias</h2>
+            <div class="amount">R$ 3.000</div>
+            <p class="mb-0"><strong>3 dias</strong> com <strong>3 horas por dia</strong> (total 9h).<br>Aula privada com rádio, análise e suporte completo. <strong>Equipamento incluído.</strong></p>
+            <p class="price-note mt-2">Downwind e transfers sob demanda.</p>
+          </div>
+
+          <div class="lang lang-en">
+            <h2 class="mt-0 mb-0">Intensive Package — 3 days</h2>
+            <div class="amount">R$ 3,000</div>
+            <p class="mb-0"><strong>3 days</strong> with <strong>3 hours per day</strong> (total 9h).<br>Private lesson with radio, analysis and full support. <strong>Equipment included.</strong></p>
+            <p class="price-note mt-2">Downwind and transfers on demand.</p>
+          </div>
+
+          <a class="btn mt-3" href="https://wa.me/34616843816?text=Quero%20reservar%20o%20pacote%20de%203%20dias." target="_blank" rel="noopener">Reservar no WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIA / GALLERY -->
+    <section id="galeria" class="section">
+      <div class="container">
+        <div class="lang lang-pt active">
+          <h2 class="mt-0">Galeria</h2>
+        </div>
+        <div class="lang lang-en">
+          <h2 class="mt-0">Gallery</h2>
+        </div>
+
+        <div class="gallery">
+          <figure class="tile"><img src="assets/img/c1.jpg" alt="Aula de kitesurf em Jericoacoara"></figure>
+          <figure class="tile"><img src="assets/img/c2.jpg" alt="Instrutor e aluno praticando com barra"></figure>
+          <figure class="tile"><img src="assets/img/c3.jpg" alt="Buggy e alunos na praia de Jeri"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO / CONTACT -->
+    <section id="contato" class="section">
+      <div class="container lead">
+        <div class="box">
+          <div class="lang lang-pt active">
+            <h2 class="mt-0">Contato</h2>
+            <p>Fale direto no WhatsApp e montamos o plano ideal para você.</p>
+            <p><strong>WhatsApp:</strong> +34 616 843 816</p>
+            <a class="btn" href="https://wa.me/34616843816" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+            <p class="price-note mt-3">Atendimento em Português, Espanhol e Inglês.</p>
+          </div>
+          <div class="lang lang-en">
+            <h2 class="mt-0">Contact</h2>
+            <p>Message us on WhatsApp and we’ll build the perfect plan for you.</p>
+            <p><strong>WhatsApp:</strong> +34 616 843 816</p>
+            <a class="btn" href="https://wa.me/34616843816" target="_blank" rel="noopener">Chat on WhatsApp</a>
+            <p class="price-note mt-3">Service in Portuguese, Spanish and English.</p>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="lang lang-pt active">
+            <h3 class="mt-0">Horários &amp; Vento</h3>
+            <p>Ventila quase todo dia. Marcamos conforme maré e janela de vento para o seu nível.</p>
+            <small>Transfer para lagoa e downwinds sob consulta.</small>
+          </div>
+          <div class="lang lang-en">
+            <h3 class="mt-0">Schedule &amp; Wind</h3>
+            <p>Windy almost every day. We schedule based on tide and wind window for your level.</p>
+            <small>Transfers to the lagoon and downwinds on request.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
     <div class="container center">
-      <h2>Curso completo (≈3h/dia) + equipamento incluso</h2>
-      <h1>R$ 3.000</h1>
-      <p>Seguro de acidentes: <strong>não incluído</strong></p>
-      <a href="https://wa.me/34616843816" class="btn">Reservar no WhatsApp</a>
-    </div>
-  </section>
-
-  <!-- GALERIA -->
-  <section id="galeria" class="section">
-    <div class="container">
-      <h2>Galeria</h2>
-      <div class="gallery">
-        <img src="assets/img/c1.jpg" alt="Aula de Kitesurf – Iniciante">
-        <img src="assets/img/c2.jpg" alt="Aula de Kitesurf – Intermediário">
-        <img src="assets/img/c3.jpg" alt="Aula de Kitesurf – Dupla">
-      </div>
-    </div>
-  </section>
-
-  <!-- CAPA FINAL -->
-  <section class="final" style="background-image: url('assets/img/capa.jpg');">
-    <div class="overlay">
-      <h3>Vento, liberdade e paixão pelo mar 🌊</h3>
-      <p>Atendemos em Português · Español · English</p>
-      <a href="https://wa.me/34616843816" class="btn">Agendar agora</a>
-    </div>
-  </section>
-
-  <!-- CONTATO -->
-  <section id="contato" class="section">
-    <div class="container grid two">
-      <div>
-        <h2>Contato</h2>
-        <p><strong>WhatsApp:</strong> <a href="https://wa.me/34616843816" target="_blank">+34 616 843 816</a></p>
-        <p><strong>Email:</strong> <a href="mailto:igoribiza@gmail.com">igoribiza@gmail.com</a></p>
-        <p><strong>Local:</strong> Jericoacoara, CE – Brasil</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div>© <span id="year"></span> GoKiteJeri · Escola de Kitesurf em Jericoacoara</div>
+      <small>© GoKiteJeri · Jericoacoara, Brasil</small>
     </div>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
