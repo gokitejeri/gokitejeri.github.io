@@ -2,7 +2,7 @@
 <html lang="pt">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>GoKiteJeri — Escola de Kitesurf em Jericoacoara</title>
 <meta name="theme-color" content="#0a0a0a">
 <link rel="icon" href="/assets/img/logo.jpg">
@@ -27,7 +27,7 @@ a{text-decoration:none;color:inherit}
 .nav a{margin-left:18px;opacity:.85}
 .nav a:hover{opacity:1}
 
-/* Lang */
+/* Lang (PT por defecto + atalho para EN) */
 .lang{display:flex;align-items:center;gap:10px}
 .flag{width:36px;height:28px;border-radius:6px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:18px;cursor:pointer;background:#fff}
 
@@ -42,23 +42,41 @@ a{text-decoration:none;color:inherit}
 .btn.info{background:var(--blue);color:#fff;border:none}
 .btn.info:hover{background:var(--blue-2)}
 
-/* Cards */
+/* Seções */
 section{padding:56px 20px;max-width:1100px;margin:auto}
+
+/* Cards */
 .cards{display:grid;gap:22px}
-.card{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}
-.card img{width:100%;height:220px;object-fit:cover}
-.card h3{font-size:22px;margin:12px 18px 6px}
-.card p{margin:0 18px 14px;color:var(--muted)}
-.card .btn.info{margin:0 18px 18px}
+@media(min-width:900px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card);display:flex;flex-direction:column}
+.card-img{position:relative}
+.card-img img{width:100%;height:220px;object-fit:cover}
+.card-body{padding:14px 18px 6px}
+.card-title{font-size:20px;font-weight:700;margin:0 0 6px}
+.card-text{color:var(--muted);margin:0 0 10px}
 
-/* Lifestyle block */
-.lifestyle{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:32px}
+/* 🔵🟩 BOTÕES SEMPRE VISÍVEIS nas cartas */
+.card-actions{
+  display:flex;
+  gap:10px;
+  padding:12px 18px 18px;
+}
+.card-actions .btn{
+  border-radius:10px;
+  border:none;
+  font-weight:700;
+}
+.card-actions .wa{background:var(--wa);color:#fff}
+.card-actions .info{background:var(--blue);color:#fff}
+.card-actions .info:hover{background:var(--blue-2)}
+
+/* Lifestyle bloco */
+.lifestyle{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:32px;display:flex;flex-direction:column}
 .lifestyle img{width:100%;height:260px;object-fit:cover}
-.lifestyle-text{padding:18px}
-.lifestyle-text h3{margin:0 0 6px}
-.lifestyle-text p{color:var(--muted);margin:0 0 12px}
+.lifestyle .card-body{padding:16px 18px 6px}
 
-/* Footer */
+/* Detalhes */
+ul.details{padding-left:18px;color:var(--muted);line-height:1.55}
 footer{text-align:center;font-size:14px;color:var(--muted);padding:34px 0;border-top:1px solid var(--line)}
 </style>
 </head>
@@ -67,7 +85,7 @@ footer{text-align:center;font-size:14px;color:var(--muted);padding:34px 0;border
 
 <header class="header wrap">
   <div class="brand">
-    <img src="/assets/img/logo.jpg" alt="">
+    <img src="/assets/img/logo.jpg" alt="GoKiteJeri">
     <b>GoKiteJeri</b>
   </div>
   <nav class="nav">
@@ -81,7 +99,7 @@ footer{text-align:center;font-size:14px;color:var(--muted);padding:34px 0;border
 </header>
 
 <section class="hero">
-  <img src="/assets/img/hero.jpg">
+  <img src="/assets/img/hero.jpg" alt="Kitesurf em Jericoacoara">
   <div>
     <h1>Jeri. Vento. Liberdade.</h1>
     <p>Aulas particulares e experiências reais em Jericoacoara.</p>
@@ -92,50 +110,63 @@ footer{text-align:center;font-size:14px;color:var(--muted);padding:34px 0;border
 
 <section id="aulas">
   <h2 style="font-size:28px;margin-bottom:22px;font-weight:700">Aulas particulares</h2>
+
   <div class="cards">
 
-    <div class="card">
-      <img src="/assets/img/c1.jpg">
-      <h3>Aula 1:1</h3>
-      <p>Foco total em você. Método seguro e progressivo. Equipamento completo incluído.</p>
-      <a href="https://wa.me/34616843816" class="btn wa">Reservar</a>
-      <a href="#detalhes" class="btn info">Mais informações</a>
-    </div>
+    <!-- Card 1 -->
+    <article class="card">
+      <div class="card-img">
+        <img src="/assets/img/c1.jpg" alt="Aula 1:1">
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Aula 1:1</h3>
+        <p class="card-text">Foco total em você. Método seguro e progressivo. Equipamento completo incluído.</p>
+      </div>
+      <div class="card-actions">
+        <a href="https://wa.me/34616843816" class="btn wa">Reservar</a>
+        <a href="#detalhes" class="btn info">Mais informações</a>
+      </div>
+    </article>
 
-    <div class="card" id="downwind">
-      <img src="/assets/img/c2.jpg">
-      <h3>Downwind & Progressão</h3>
-      <p>Evolução real em vento e mar aberto. Apoio dedicado.</p>
-      <a href="https://wa.me/34616843816" class="btn wa">Reservar</a>
-      <a href="#detalhes" class="btn info">Mais informações</a>
-    </div>
+    <!-- Card 2 -->
+    <article class="card" id="downwind">
+      <div class="card-img">
+        <img src="/assets/img/c2.jpg" alt="Downwind & Progressão">
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Downwind & Progressão</h3>
+        <p class="card-text">Evolução real em vento e mar aberto. Apoio dedicado.</p>
+      </div>
+      <div class="card-actions">
+        <a href="https://wa.me/34616843816" class="btn wa">Reservar</a>
+        <a href="#detalhes" class="btn info">Mais informações</a>
+      </div>
+    </article>
 
-    <div class="card">
-      <img src="/assets/img/c3.jpg">
-      <h3>Confiança na água</h3>
-      <p>Passo-a-passo com atenção total. Experiência segura e clara.</p>
-      <a href="https://wa.me/34616843816" class="btn wa">Reservar</a>
-      <a href="#detalhes" class="btn info">Mais informações</a>
-    </div>
+    <!-- Card 3 -->
+    <article class="card">
+      <div class="card-img">
+        <img src="/assets/img/c3.jpg" alt="Jeri lifestyle">
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Jeri lifestyle</h3>
+        <p class="card-text">Pôr do sol, lagoas e vibe local. Lado autêntico, sem turistão.</p>
+      </div>
+      <div class="card-actions">
+        <a href="https://wa.me/34616843816" class="btn wa">Reservar</a>
+        <a href="#detalhes" class="btn info">Mais informações</a>
+      </div>
+    </article>
 
-  </div>
-
-  <div class="lifestyle" id="lifestyle">
-    <img src="/assets/img/capa.jpg">
-    <div class="lifestyle-text">
-      <h3>Jeri lifestyle</h3>
-      <p>Pôr do sol, lagoas e vibe local. Mostramos o lado autêntico, sem turistão.</p>
-      <a href="#detalhes" class="btn info">Mais informações</a>
-    </div>
   </div>
 </section>
 
 <section id="detalhes">
   <h2 style="font-size:28px;font-weight:700;margin-bottom:8px">Detalhes das aulas</h2>
-  <ul style="padding-left:18px;color:var(--muted);line-height:1.5">
-    <li>Duração: 3 horas por sessão</li>
-    <li>Inclui equipamento completo</li>
-    <li>Spot: lagoa + mar aberto (condições)</li>
+  <ul class="details">
+    <li>Duração: <b>3 horas por sessão</b></li>
+    <li><b>Inclui equipamento completo</b></li>
+    <li>Spot: lagoa + mar aberto (conforme condições)</li>
     <li>Segurança, progressão e suporte completo</li>
     <li>Idiomas: PT · ES · EN</li>
   </ul>
@@ -150,8 +181,9 @@ footer{text-align:center;font-size:14px;color:var(--muted);padding:34px 0;border
 </section>
 
 <footer>
-  © 2025 GoKiteJeri — Jericoacoara, Brasil
+  © <span id="y"></span> GoKiteJeri — Jericoacoara, Brasil
 </footer>
 
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>
