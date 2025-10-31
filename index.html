@@ -1,68 +1,125 @@
-:root{
-  --bg:#ffffff; --ink:#111; --muted:#6f6f75; --line:#e9e9ee;
-  --card:#f7f7fa; --accent:#0a0a0a; --wa:#25D366; --blue:#0077ff;
-}
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";}
-img{max-width:100%;height:auto;display:block}
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>gokitejeri — Jeri. Viento. Libertad.</title>
 
-/* Layout base */
-.wrap{max-width:1100px;margin:0 auto;padding:24px}
-.header{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
-.brand{display:flex;align-items:center;gap:10px}
-.brand-mark{width:32px;height:32px;border-radius:8px;object-fit:cover}
-.brand-name{font-weight:700;letter-spacing:.3px}
-.nav a{color:var(--ink);opacity:.75;margin-left:16px;text-decoration:none}
-.nav a:hover{opacity:1}
+  <!-- Open Graph / WhatsApp preview -->
+  <meta property="og:title" content="gokitejeri — Jeri. Viento. Libertad.">
+  <meta property="og:description" content="Clases privadas, experiencias auténticas y lifestyle en Jericoacoara. Tu ritmo. Tu viento.">
+  <meta property="og:image" content="https://gokitejeri.com/assets/img/hero.jpg">
+  <meta property="og:url" content="https://gokitejeri.com">
+  <meta name="theme-color" content="#0a0a0a">
 
-/* HERO */
-.hero{position:relative;min-height:75vh;display:grid;place-items:center;border-bottom:1px solid var(--line);overflow:hidden}
-.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center center;transform:translateZ(0)}
-.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.3),rgba(0,0,0,.35))}
-.hero-inner{position:relative;text-align:center;color:#fff;padding:64px 0 56px}
-.hero h1{font-size:clamp(32px,5.5vw,56px);line-height:1.06;margin:0 0 8px}
-.lead{font-size:clamp(16px,2.2vw,20px);opacity:.95;margin:0 0 16px}
-.cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  <link rel="icon" href="/assets/img/logo.jpg">
+  <link rel="preload" as="image" href="/assets/img/hero.jpg">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="wrap header">
+    <a class="brand" href="/">
+      <img class="brand-mark" src="/assets/img/logo.jpg" alt="gokitejeri" />
+      <span class="brand-name">gokitejeri</span>
+    </a>
+    <nav class="nav">
+      <a href="#clases">Clases</a>
+      <a href="#experiencias">Experiencias</a>
+      <a href="#detalles-clases">Detalles</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
 
-/* Botones */
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 18px;border-radius:12px;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.06);backdrop-filter: blur(6px);color:#fff;text-decoration:none;font-weight:700}
-.btn:hover{background:rgba(255,255,255,.12)}
-.btn.primary{background:var(--wa);border-color:var(--wa);color:#fff}
-.btn.primary:hover{background:#1ebe5c}
-.btn.ghost{background:transparent;border-color:rgba(255,255,255,.45);color:#fff}
-.btn.info{background:var(--blue);border-color:var(--blue);color:#fff}
-.btn.info:hover{background:#0068e0}
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg" style="background-image:url('/assets/img/hero.jpg')"></div>
+      <div class="wrap hero-inner">
+        <h1>Jeri. Viento. Libertad.</h1>
+        <p class="lead">La esencia no se explica, se vive. Clases privadas y experiencias reales en Jericoacoara.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="https://wa.me/34616843816?text=Hola%2C%20vengo%20por%20gokitejeri%20y%20quiero%20info" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+          <a class="btn ghost" href="#clases">Ver más</a>
+        </div>
+      </div>
+    </section>
 
-/* Bloques */
-.blocks{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;margin:28px auto}
-.block{grid-column:span 12;display:grid;grid-template-columns:1fr;gap:12px;border:1px solid var(--line);border-radius:16px;padding:14px;background:#fff}
-.block img{width:100%;border-radius:12px;object-fit:cover;aspect-ratio:16/9}
-.block h2{margin:4px 0 6px}
-.block p{margin:0 0 10px;color:var(--muted)}
-@media(min-width:880px){ .block{grid-template-columns:5fr 7fr} }
+    <!-- BLOQUES -->
+    <section id="clases" class="wrap blocks">
+      <article class="block">
+        <img src="/assets/img/c1.jpg" alt="Clases privadas">
+        <div>
+          <h2>Clases privadas</h2>
+          <p>1 a 1, foco total en ti. Metodología clara, segura y progresiva. Equipo incluido.</p>
+          <a class="btn info" href="#detalles-clases">Más información</a>
+        </div>
+      </article>
 
-/* Capa visual */
-.capa{margin:32px 0;position:relative}
-.capa img{width:100%;border-radius:16px;border:1px solid var(--line);object-fit:cover;aspect-ratio:21/9}
-.capa-text{position:absolute;right:24px;bottom:24px;background:rgba(255,255,255,.86);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
-.capa-text h3{margin:0 0 4px}
+      <article class="block">
+        <img src="/assets/img/c2.jpg" alt="Downwind y progresión">
+        <div>
+          <h2>Downwind & progresión</h2>
+          <p>Rutas guiadas y coaching para evolucionar con viento real y mar abierto.</p>
+          <a class="btn info" href="#detalles-clases">Más información</a>
+        </div>
+      </article>
 
-/* Detalles */
-.detalles{margin:36px auto 12px}
-.detalles h2{margin:0 0 10px}
-.list{margin:0 0 16px;padding-left:18px;color:var(--ink)}
-.list li{margin:6px 0}
+      <article class="block">
+        <img src="/assets/img/c3.jpg" alt="Lifestyle Jeri">
+        <div>
+          <h2>Jeri lifestyle</h2>
+          <p>Playas, atardeceres y ritmo propio. Te mostramos el lado auténtico, sin turisteo.</p>
+          <a class="btn info" href="#detalles-clases">Más información</a>
+        </div>
+      </article>
+    </section>
 
-/* Contacto / Footer */
-.contacto{text-align:center;margin:36px 0 20px}
-.muted{color:var(--muted)}
-.footer{color:var(--muted);border-top:1px solid var(--line);margin-top:24px;padding-top:16px}
+    <!-- CAPA VISUAL (ahora como fondo cover para que encaje perfecto) -->
+    <section id="experiencias" class="wrap capa">
+      <div class="capa-bg" style="background-image:url('/assets/img/capa.jpg')"></div>
+      <div class="capa-text">
+        <h3>By recommendation only</h3>
+        <p>Trabajamos con cupos limitados. Si no hay disponibilidad, te recomendamos alternativas fiables.</p>
+      </div>
+    </section>
 
-/* Botón flotante WhatsApp móvil */
-.wa-float{
-  position:fixed; right:16px; bottom:16px; width:54px; height:54px;
-  border-radius:50%; background:var(--wa); color:#fff; display:flex; align-items:center; justify-content:center;
-  text-decoration:none; font-weight:900; box-shadow:0 6px 18px rgba(0,0,0,.18); border:1px solid #1ebe5c;
-}
-@media (min-width:980px){ .wa-float{display:none} }
+    <!-- DETALLES CLASES -->
+    <section id="detalles-clases" class="wrap detalles">
+      <h2>Clases privadas — detalles</h2>
+      <ul class="list">
+        <li>Duración: 2–3 h por sesión (ajustable al viento y a tu nivel).</li>
+        <li>Incluye: equipo completo, radio para coaching, análisis rápido.</li>
+        <li>Spot: laguna + mar abierto (según condiciones).</li>
+        <li>Seguridad: metodología progresiva, control de riesgos, rescate si es necesario.</li>
+        <li>Idiomas: PT · ES · EN.</li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn primary" href="https://wa.me/34616843816?text=Hola%2C%20quiero%20reservar%20clases%20privadas%20en%20Jeri" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+        <a class="btn ghost" href="#clases">Volver a Clases</a>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="wrap contacto">
+      <h2>Contacto directo</h2>
+      <p class="muted">Respuesta rápida. Idiomas: PT · ES · EN.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="https://wa.me/34616843816?text=Hola%2C%20vengo%20por%20gokitejeri%20y%20quiero%20disponibilidad" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn ghost" href="mailto:info@gokitejeri.com?subject=Contacto%20gokitejeri">Email</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    © <span id="year"></span> gokitejeri · Jericoacoara, Brasil
+  </footer>
+
+  <!-- Botón flotante WhatsApp en móvil -->
+  <a class="wa-float" href="https://wa.me/34616843816?text=Hola%2C%20vengo%20por%20gokitejeri" target="_blank" rel="noopener" aria-label="WhatsApp">✆</a>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
