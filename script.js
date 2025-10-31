@@ -1,108 +1,105 @@
-// Año en footer
-document.getElementById('y').textContent = new Date().getFullYear();
+// Año en el footer
+document.getElementById('year').textContent = new Date().getFullYear();
 
-// Diccionario simple PT/EN
+/* ---------------- HERO IMAGE AUTOFIX ----------------
+   Buscará la primera imagen existente en assets/img/
+   entre varias opciones (para evitar problemas de mayúsculas).
+----------------------------------------------------- */
+(function setHeroImage(){
+  const candidates = [
+    'assets/img/k.jpg', 'assets/img/K.JPG',
+    'assets/img/hero.jpg', 'assets/img/Hero.jpg',
+    'assets/img/capa.jpg'
+  ];
+  const hero = document.querySelector('.hero');
+  const test = (url) => new Promise(res => {
+    const i = new Image();
+    i.onload = () => res(url);
+    i.onerror = () => res(null);
+    i.src = url + (url.includes('?') ? '&' : '?') + 'v=' + Date.now();
+  });
+  (async () => {
+    for (const url of candidates){
+      const ok = await test(url);
+      if (ok){ hero.style.backgroundImage = `url("${ok}")`; return; }
+    }
+    // si ninguna existe, mantenemos el fallback oscuro
+  })();
+})();
+
+/* ---------------- I18N (PT por defecto / EN al pulsar) ---------------- */
 const dict = {
   pt: {
-    "nav.aulas": "Aulas",
-    "nav.downwind": "Downwind",
-    "nav.contato": "Contato",
-
-    "hero.title": "Jeri. Vento. Liberdade.",
-    "hero.subtitle": "Aulas particulares e experiências reais em Jericoacoara.",
-
-    "btn.whatsapp": "Falar no WhatsApp",
-    "btn.vermais": "Ver mais",
-    "btn.reservar": "Reservar",
-    "btn.maisinfo": "Mais informações",
-    "btn.reservarwa": "Reservar no WhatsApp",
-    "btn.whatsapp2": "WhatsApp",
-
-    "cards.title": "Aulas particulares",
-    "cards.aula1.title": "Aula 1:1",
-    "cards.aula1.text": "Foco total em você. Método seguro e progressivo. Equipamento completo incluído.",
-    "cards.dw.title": "Downwind & Progressão",
-    "cards.dw.text": "Evolução real em vento e mar aberto. Apoio dedicado.",
-    "cards.life.title": "Jeri lifestyle",
-    "cards.life.text": "Pôr do sol, lagoas e vibe local. Lado autêntico, sem turistão.",
-
-    "det.title": "Detalhes das aulas",
-    "det.dur": "Duração: <b>3 horas por sessão</b>",
-    "det.equip": "<b>Inclui equipamento completo</b>",
-    "det.spot": "Spot: lagoa + mar aberto (conforme condições)",
-    "det.safe": "Segurança, progressão e suporte completo",
-    "det.langs": "Idiomas: PT · ES · EN",
-
-    "ct.title": "Contato",
-    "ct.desc": "Resposta rápida · PT · ES · EN",
+    'nav.classes': 'Aulas',
+    'nav.downwind': 'Downwind',
+    'nav.contact' : 'Contato',
+    'hero.title'  : 'Jeri. Vento. Liberdade.',
+    'hero.lead'   : 'Aulas particulares e experiências reais em Jericoacoara.',
+    'cta.whatsapp': 'Falar no WhatsApp',
+    'cta.more'    : 'Ver mais',
+    'cards.title' : 'Aulas particulares',
+    'cards.c1.title': 'Aula 1:1',
+    'cards.c1.text' : 'Foco total em você. Método seguro e progressivo. Equipamento completo incluído.',
+    'cards.c2.title': 'Downwind & Progressão',
+    'cards.c2.text' : 'Evolução real em vento e mar aberto. Apoio dedicado.',
+    'cards.c3.text' : 'Pôr do sol, lagoas e vibe local. Lado autêntico, sem turistão.',
+    'cards.book'    : 'Reservar',
+    'cards.more'    : 'Mais informações',
+    'details.title' : 'Detalhes das aulas',
+    'details.li1'   : 'Duração: 3 horas por sessão',
+    'details.li2'   : 'Inclui: equipamento completo',
+    'details.li3'   : 'Spot: lagoa + mar aberto (conforme condições)',
+    'details.li4'   : 'Segurança: progressão e suporte completo',
+    'details.li5'   : 'Idiomas: PT · ES · EN',
+    'cta.reserve'   : 'Reservar no WhatsApp',
+    'contact.title' : 'Contato',
+    'contact.text'  : 'Resposta rápida · PT · ES · EN'
   },
-
   en: {
-    "nav.aulas": "Lessons",
-    "nav.downwind": "Downwind",
-    "nav.contato": "Contact",
-
-    "hero.title": "Jeri. Wind. Freedom.",
-    "hero.subtitle": "Private lessons and real experiences in Jericoacoara.",
-
-    "btn.whatsapp": "Chat on WhatsApp",
-    "btn.vermais": "Learn more",
-    "btn.reservar": "Book now",
-    "btn.maisinfo": "More info",
-    "btn.reservarwa": "Book on WhatsApp",
-    "btn.whatsapp2": "WhatsApp",
-
-    "cards.title": "Private lessons",
-    "cards.aula1.title": "1:1 Lesson",
-    "cards.aula1.text": "Full focus on you. Safe, progressive method. Full equipment included.",
-    "cards.dw.title": "Downwind & Progression",
-    "cards.dw.text": "Real evolution in wind and open sea. Dedicated support.",
-    "cards.life.title": "Jeri lifestyle",
-    "cards.life.text": "Sunset, lagoons and local vibe. Authentic side, no tourist traps.",
-
-    "det.title": "Lesson details",
-    "det.dur": "Duration: <b>3 hours per session</b>",
-    "det.equip": "<b>Full equipment included</b>",
-    "det.spot": "Spot: lagoon + open sea (weather dependent)",
-    "det.safe": "Safety, progression and full support",
-    "det.langs": "Languages: PT · ES · EN",
-
-    "ct.title": "Contact",
-    "ct.desc": "Fast reply · PT · ES · EN",
+    'nav.classes': 'Lessons',
+    'nav.downwind': 'Downwind',
+    'nav.contact' : 'Contact',
+    'hero.title'  : 'Jeri. Wind. Freedom.',
+    'hero.lead'   : 'Private lessons and real experiences in Jericoacoara.',
+    'cta.whatsapp': 'Chat on WhatsApp',
+    'cta.more'    : 'Learn more',
+    'cards.title' : 'Private lessons',
+    'cards.c1.title': '1:1 Lesson',
+    'cards.c1.text' : 'Full focus on you. Safe and progressive method. Full equipment included.',
+    'cards.c2.title': 'Downwind & Progression',
+    'cards.c2.text' : 'Real evolution in wind and open sea. Dedicated support.',
+    'cards.c3.text' : 'Sunset, lagoons and local vibe. Authentic, off the tourist trail.',
+    'cards.book'    : 'Book',
+    'cards.more'    : 'More info',
+    'details.title' : 'Lesson details',
+    'details.li1'   : 'Duration: 3 hours per session',
+    'details.li2'   : 'Includes: full equipment',
+    'details.li3'   : 'Spot: lagoon + open sea (weather permitting)',
+    'details.li4'   : 'Safety: progressive method & full support',
+    'details.li5'   : 'Languages: PT · ES · EN',
+    'cta.reserve'   : 'Book on WhatsApp',
+    'contact.title' : 'Contact',
+    'contact.text'  : 'Fast reply · PT · ES · EN'
   }
 };
 
-// Aplica traducción
-function applyLang(lang){
-  const strings = dict[lang] || dict.pt;
-  document.documentElement.lang = lang;
-
-  // Reemplazar todos los elementos con data-i18n
+const $t = (lang) => {
   document.querySelectorAll('[data-i18n]').forEach(el=>{
     const key = el.getAttribute('data-i18n');
-    if(strings[key]){
-      // Permitir <b> en algunos textos
-      if(strings[key].includes('<b>')){
-        el.innerHTML = strings[key];
-      } else {
-        el.textContent = strings[key];
-      }
-    }
+    if (dict[lang] && dict[lang][key]) el.innerHTML = dict[lang][key];
   });
+  document.documentElement.lang = lang;
+};
 
-  // Cambiar label del botón
-  const btn = document.getElementById('langSwitch');
-  btn.textContent = (lang === 'en') ? 'PT 🇧🇷' : 'EN 🇬🇧';
-
-  // Guardar preferencia
-  localStorage.setItem('lang', lang);
-}
-
-// Toggle del botón
-document.getElementById('langSwitch').addEventListener('click', ()=>{
-  const current = localStorage.getItem('lang') || 'pt';
-  applyLang(current === 'pt' ? 'en' : 'pt');
+const langBtn = document.getElementById('langToggle');
+langBtn.addEventListener('click', ()=>{
+  const isPT = document.documentElement.lang !== 'en';
+  const next = isPT ? 'en' : 'pt';
+  $t(next);
+  // Cambiar indicador del botón
+  document.getElementById('langCode').textContent = next.toUpperCase();
+  langBtn.querySelector('.flag').textContent = next === 'en' ? '🇬🇧' : '🇧🇷';
 });
 
-// Cargar idioma guardado (o PT por defecto)
-applyLang(localStorage.getItem('lang') || 'pt');
+// aplicar PT por defecto al cargar
+$t('pt');
