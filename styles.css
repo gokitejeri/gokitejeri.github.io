@@ -119,3 +119,28 @@ body{
   .hero{min-height:64vh}
   .hero-title{font-size:36px}
 }
+/* FIX — reset layout roto */
+.main {
+  width: 100%;
+}
+
+.section .wrap {
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* FIX — grid 3 cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  width: 100%;
+}
+
+@media (max-width: 980px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
