@@ -14,7 +14,13 @@
 
   <link rel="icon" href="/assets/img/logo.jpg">
   <link rel="preload" as="image" href="/assets/img/hero.jpg">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/main.css?v=5">
+
+  <!-- Override de seguridad por si el navegador tiene CSS viejo en caché -->
+  <style>
+    .btn.primary{background:#25D366!important;border-color:#25D366!important;color:#fff!important}
+    .btn.info{background:#0077ff!important;border-color:#0077ff!important;color:#fff!important}
+  </style>
 </head>
 <body>
   <!-- Header -->
@@ -75,7 +81,7 @@
       </article>
     </section>
 
-    <!-- CAPA VISUAL (ahora como fondo cover para que encaje perfecto) -->
+    <!-- CAPA VISUAL (fondazo cover para que encaje perfecto) -->
     <section id="experiencias" class="wrap capa">
       <div class="capa-bg" style="background-image:url('/assets/img/capa.jpg')"></div>
       <div class="capa-text">
@@ -118,8 +124,6 @@
   <!-- Botón flotante WhatsApp en móvil -->
   <a class="wa-float" href="https://wa.me/34616843816?text=Hola%2C%20vengo%20por%20gokitejeri" target="_blank" rel="noopener" aria-label="WhatsApp">✆</a>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
