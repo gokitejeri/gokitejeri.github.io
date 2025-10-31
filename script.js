@@ -103,3 +103,23 @@ langBtn.addEventListener('click', ()=>{
 
 // aplicar PT por defecto al cargar
 $t('pt');
+document.getElementById("pt-btn").onclick = () => {
+    localStorage.setItem("lang", "pt");
+    location.reload();
+};
+
+document.getElementById("en-btn").onclick = () => {
+    localStorage.setItem("lang", "en");
+    location.reload();
+};
+
+const lang = localStorage.getItem("lang") || "pt";
+
+if (lang === "pt") {
+    document.getElementById("pt-btn").classList.add("active");
+    document.getElementById("en-btn").classList.remove("active");
+} else {
+    document.getElementById("en-btn").classList.add("active");
+    document.getElementById("pt-btn").classList.remove("active");
+}
+
