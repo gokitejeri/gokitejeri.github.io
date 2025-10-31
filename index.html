@@ -11,27 +11,29 @@
 
 <body>
   <!-- HEADER -->
-  <header class="nav">
-    <div class="wrap">
-      <a class="brand" href="#">
-        <img src="assets/img/logo.jpg" alt="GoKiteJeri" class="brand-img">
+ <header class="navbar">
+    <div class="brand">
+        <img src="assets/img/logo.jpg" alt="GoKiteJeri Logo" class="logo">
         <span class="brand-name">GoKiteJeri</span>
-      </a>
-
-      <nav class="menu">
-        <a href="#aulas" class="menu-link">Aulas</a>
-        <a href="#downwind" class="menu-link">Downwind</a>
-        <a href="#contato" class="menu-link">Contato</a>
-      </nav>
-
-      <div class="lang-switch">
-        <a href="?lang=en" class="pill">
-          <span class="pill-text">EN</span>
-          <span class="flag" aria-label="English">🇬🇧</span>
-        </a>
-      </div>
     </div>
-  </header>
+
+    <nav class="nav-links">
+        <a href="#aulas">Aulas</a>
+        <a href="#downwind">Downwind</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <!-- Language Switch -->
+    <div class="lang-switch">
+        <button id="pt-btn" class="lang-btn active">
+            🇧🇷 PT
+        </button>
+        <button id="en-btn" class="lang-btn">
+            🇬🇧 EN
+        </button>
+    </div>
+</header>
+
 
   <!-- HERO -->
   <section class="hero">
