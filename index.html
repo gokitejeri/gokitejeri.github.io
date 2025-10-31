@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+  <!-- Header -->
   <header class="wrap header">
     <a class="brand" href="/">
       <img class="brand-mark" src="/assets/img/logo.jpg" alt="gokitejeri" />
@@ -25,6 +26,7 @@
     <nav class="nav">
       <a href="#clases">Clases</a>
       <a href="#experiencias">Experiencias</a>
+      <a href="#detalles-clases">Detalles</a>
       <a href="#contacto">Contacto</a>
     </nav>
   </header>
@@ -38,7 +40,7 @@
         <p class="lead">La esencia no se explica, se vive. Clases privadas y experiencias reales en Jericoacoara.</p>
         <div class="cta-row">
           <a class="btn primary" href="https://wa.me/34616843816?text=Hola%2C%20vengo%20por%20gokitejeri%20y%20quiero%20info" target="_blank" rel="noopener">Hablar por WhatsApp</a>
-          <a class="btn" href="#clases">Ver más</a>
+          <a class="btn ghost" href="#clases">Ver más</a>
         </div>
       </div>
     </section>
@@ -50,20 +52,25 @@
         <div>
           <h2>Clases privadas</h2>
           <p>1 a 1, foco total en ti. Metodología clara, segura y progresiva. Equipo incluido.</p>
+          <a class="btn info" href="#detalles-clases">Más información</a>
         </div>
       </article>
+
       <article class="block">
         <img src="/assets/img/c2.jpg" alt="Downwind y progresión">
         <div>
           <h2>Downwind & progresión</h2>
           <p>Rutas guiadas y coaching para evolucionar con viento real y mar abierto.</p>
+          <a class="btn info" href="#detalles-clases">Más información</a>
         </div>
       </article>
+
       <article class="block">
         <img src="/assets/img/c3.jpg" alt="Lifestyle Jeri">
         <div>
           <h2>Jeri lifestyle</h2>
           <p>Playas, atardeceres y ritmo propio. Te mostramos el lado auténtico, sin turisteo.</p>
+          <a class="btn info" href="#detalles-clases">Más información</a>
         </div>
       </article>
     </section>
@@ -77,13 +84,29 @@
       </div>
     </section>
 
+    <!-- DETALLES CLASES -->
+    <section id="detalles-clases" class="wrap detalles">
+      <h2>Clases privadas — detalles</h2>
+      <ul class="list">
+        <li>Duración: 2–3 h por sesión (ajustable al viento y a tu nivel).</li>
+        <li>Incluye: equipo completo, radio para coaching, análisis rápido.</li>
+        <li>Spot: laguna + mar abierto (según condiciones).</li>
+        <li>Seguridad: metodología progresiva, control de riesgos, rescate si es necesario.</li>
+        <li>Idiomas: PT · ES · EN.</li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn primary" href="https://wa.me/34616843816?text=Hola%2C%20quiero%20reservar%20clases%20privadas%20en%20Jeri" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+        <a class="btn ghost" href="#clases">Volver a Clases</a>
+      </div>
+    </section>
+
     <!-- CONTACTO -->
     <section id="contacto" class="wrap contacto">
       <h2>Contacto directo</h2>
       <p class="muted">Respuesta rápida. Idiomas: PT · ES · EN.</p>
       <div class="cta-row">
-        <a class="btn primary" href="https://wa.me/34616843816?text=Hola%2C%20quiero%20reserva%20en%20Jeri%20con%20gokitejeri" target="_blank" rel="noopener">WhatsApp</a>
-        <a class="btn" href="mailto:info@gokitejeri.com?subject=Contacto%20gokitejeri">Email</a>
+        <a class="btn primary" href="https://wa.me/34616843816?text=Hola%2C%20vengo%20por%20gokitejeri%20y%20quiero%20disponibilidad" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn ghost" href="mailto:info@gokitejeri.com?subject=Contacto%20gokitejeri">Email</a>
       </div>
     </section>
   </main>
@@ -91,6 +114,9 @@
   <footer class="wrap footer">
     © <span id="year"></span> gokitejeri · Jericoacoara, Brasil
   </footer>
+
+  <!-- Botón flotante WhatsApp en móvil -->
+  <a class="wa-float" href="https://wa.me/34616843816?text=Hola%2C%20vengo%20por%20gokitejeri" target="_blank" rel="noopener" aria-label="WhatsApp">✆</a>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
