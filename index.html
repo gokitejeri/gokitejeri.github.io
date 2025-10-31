@@ -3,137 +3,134 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>GoKiteJeri — Aulas & Downwind em Jericoacoara</title>
+  <title>GoKiteJeri — Kitesurf em Jericoacoara</title>
   <meta name="description" content="Aulas particulares de kitesurf e experiências reais em Jericoacoara. Segurança, progressão e vibe boa." />
-  <link rel="preload" href="styles.css" as="style">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="preload" as="image" href="assets/img/hero.jpg">
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <header class="topbar">
+  <!-- HEADER -->
+  <header class="nav">
     <div class="wrap">
-      <a class="brand" href="#top">
-        <img src="assets/img/logo.jpg" alt="GoKiteJeri" class="brand__logo" />
-        <span class="brand__name">GoKiteJeri</span>
+      <a class="brand" href="#">
+        <img src="assets/img/logo.jpg" alt="GoKiteJeri" class="brand-img">
+        <span class="brand-name">GoKiteJeri</span>
       </a>
 
-      <nav class="nav">
-        <a href="#aulas" data-i18n="nav.classes">Aulas</a>
-        <a href="#downwind" data-i18n="nav.downwind">Downwind</a>
-        <a href="#contato" data-i18n="nav.contact">Contato</a>
+      <nav class="menu">
+        <a href="#aulas" class="menu-link">Aulas</a>
+        <a href="#downwind" class="menu-link">Downwind</a>
+        <a href="#contato" class="menu-link">Contato</a>
       </nav>
 
-      <button id="langToggle" class="lang">
-        <span class="flag" aria-hidden="true">🇬🇧</span>
-        <span id="langCode">EN</span>
-      </button>
+      <div class="lang-switch">
+        <a href="?lang=en" class="pill">
+          <span class="pill-text">EN</span>
+          <span class="flag" aria-label="English">🇬🇧</span>
+        </a>
+      </div>
     </div>
   </header>
 
   <!-- HERO -->
-  <section class="hero" id="top">
-    <div class="hero__overlay">
-      <div class="wrap hero__inner">
-        <h1 class="hero__title">
-          <span data-i18n="hero.title">Jeri. Vento. Liberdade.</span>
-        </h1>
-        <p class="hero__lead" data-i18n="hero.lead">
-          Aulas particulares e experiências reais em Jericoacoara.
-        </p>
-        <div class="hero__actions">
-          <a class="btn btn--whatsapp" href="https://wa.me/34616843816" target="_blank" rel="noopener">
-            <span data-i18n="cta.whatsapp">Falar no WhatsApp</span>
-          </a>
-          <a class="btn btn--ghost" href="#aulas">
-            <span data-i18n="cta.more">Ver mais</span>
-          </a>
-        </div>
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <h1 class="hero-title">Jeri. Vento. Liberdade.</h1>
+      <p class="hero-sub">Aulas particulares e experiências reais em Jericoacoara.</p>
+      <div class="hero-cta">
+        <a class="btn btn-whatsapp" href="https://wa.me/34616843816" target="_blank" rel="noopener">Falar no WhatsApp</a>
+        <a class="btn btn-ghost" href="#aulas">Ver mais</a>
       </div>
     </div>
   </section>
 
   <!-- AULAS -->
-  <main class="wrap">
-    <section id="aulas" class="section">
-      <h2 class="section__title" data-i18n="cards.title">Aulas particulares</h2>
+  <main class="wrap main">
+    <h2 id="aulas" class="h2">Aulas particulares</h2>
 
-      <div class="cards">
-        <!-- Card 1 -->
-        <article class="card">
-          <img src="assets/img/c1.jpg" alt="Aula 1:1" class="card__img" />
-          <div class="card__body">
-            <h3 class="card__title" data-i18n="cards.c1.title">Aula 1:1</h3>
-            <p class="card__text" data-i18n="cards.c1.text">
-              Foco total em você. Método seguro e progressivo. Equipamento completo incluído.
-            </p>
-            <div class="card__actions">
-              <a class="btn btn--whatsapp" href="https://wa.me/34616843816" target="_blank" rel="noopener" data-i18n="cards.book">Reservar</a>
-              <a class="btn btn--info" href="#detalhes" data-i18n="cards.more">Mais informações</a>
-            </div>
+    <div class="cards">
+      <!-- AULA 1:1 -->
+      <article class="card">
+        <img src="assets/img/c1.jpg" alt="Aula particular 1:1" class="card-img">
+        <div class="card-body">
+          <h3 class="card-title">Aula 1:1</h3>
+          <p class="card-text">Foco total em você. Método seguro e progressivo. Equipamento completo incluído.</p>
+          <div class="card-actions">
+            <a href="https://wa.me/34616843816" class="btn btn-whatsapp">Reservar</a>
+            <a href="#detalhes" class="btn btn-info">Mais informações</a>
           </div>
-        </article>
+        </div>
+      </article>
 
-        <!-- Card 2 -->
-        <article class="card" id="downwind">
-          <img src="assets/img/c2.jpg" alt="Downwind & Progressão" class="card__img" />
-          <div class="card__body">
-            <h3 class="card__title" data-i18n="cards.c2.title">Downwind & Progressão</h3>
-            <p class="card__text" data-i18n="cards.c2.text">
-              Evolução real em vento e mar aberto. Apoio dedicado.
-            </p>
-            <div class="card__actions">
-              <a class="btn btn--whatsapp" href="https://wa.me/34616843816" target="_blank" rel="noopener" data-i18n="cards.book">Reservar</a>
-              <a class="btn btn--info" href="#detalhes" data-i18n="cards.more">Mais informações</a>
-            </div>
+      <!-- DOWNWIND -->
+      <article class="card" id="downwind">
+        <img src="assets/img/c2.jpg" alt="Downwind e progressão" class="card-img">
+        <div class="card-body">
+          <h3 class="card-title">Downwind & Progressão</h3>
+          <p class="card-text">Evolução real em vento e mar aberto. Apoio dedicado.</p>
+          <div class="card-actions">
+            <a href="https://wa.me/34616843816" class="btn btn-whatsapp">Reservar</a>
+            <a href="#detalhes" class="btn btn-info">Mais informações</a>
           </div>
-        </article>
+        </div>
+      </article>
 
-        <!-- Card 3 -->
-        <article class="card">
-          <img src="assets/img/c3.jpg" alt="Jeri lifestyle" class="card__img" />
-          <div class="card__body">
-            <h3 class="card__title">Jeri lifestyle</h3>
-            <p class="card__text" data-i18n="cards.c3.text">
-              Pôr do sol, lagoas e vibe local. Lado autêntico, sem turistão.
-            </p>
-            <div class="card__actions">
-              <a class="btn btn--whatsapp" href="https://wa.me/34616843816" target="_blank" rel="noopener" data-i18n="cards.book">Reservar</a>
-              <a class="btn btn--info" href="#detalhes" data-i18n="cards.more">Mais informações</a>
-            </div>
+      <!-- JERI LIFESTYLE -->
+      <article class="card">
+        <img src="assets/img/c3.jpg" alt="Jeri lifestyle" class="card-img">
+        <div class="card-body">
+          <h3 class="card-title">Jeri lifestyle</h3>
+          <p class="card-text">Pôr do sol, lagoas e vibe local. Lado autêntico, sem turistão.</p>
+          <div class="card-actions">
+            <a href="https://wa.me/34616843816" class="btn btn-whatsapp">Reservar</a>
+            <a href="#detalhes" class="btn btn-info">Mais informações</a>
           </div>
-        </article>
+        </div>
+      </article>
+    </div>
+
+    <!-- CAPA (IMAGEM INTEIRA) -->
+    <section class="capa">
+      <img src="assets/img/capa.jpg" alt="Kitesurf pode mudar sua vida" class="capa-img">
+      <div class="note">
+        <strong>By recommendation only</strong><br>
+        Trabalhamos com cupos limitados. Se não há disponibilidade, te recomendamos alternativas fiáveis.
       </div>
     </section>
 
     <!-- DETALHES -->
-    <section id="detalhes" class="section">
-      <h2 class="section__title" data-i18n="details.title">Detalhes das aulas</h2>
+    <section id="detalhes" class="details">
+      <h2 class="h2">Detalhes das aulas</h2>
       <ul class="list">
-        <li data-i18n="details.li1"><strong>Duração:</strong> 3 horas por sessão</li>
-        <li data-i18n="details.li2"><strong>Inclui:</strong> equipamento completo</li>
-        <li data-i18n="details.li3"><strong>Spot:</strong> lagoa + mar aberto (conforme condições)</li>
-        <li data-i18n="details.li4"><strong>Segurança:</strong> progressão e suporte completo</li>
-        <li data-i18n="details.li5"><strong>Idiomas:</strong> PT · ES · EN</li>
+        <li><strong>Duração:</strong> <strong>3 horas por sessão</strong></li>
+        <li><strong>Inclui:</strong> equipamento completo</li>
+        <li><strong>Spot:</strong> lagoa + mar aberto (conforme condições)</li>
+        <li><strong>Segurança:</strong> progressão e suporte completo</li>
+        <li><strong>Idiomas:</strong> PT · ES · EN</li>
       </ul>
-      <a class="btn btn--whatsapp" href="https://wa.me/34616843816" target="_blank" rel="noopener" data-i18n="cta.reserve">
-        Reservar no WhatsApp
-      </a>
+      <a class="btn btn-whatsapp" href="https://wa.me/34616843816" target="_blank" rel="noopener">Reservar no WhatsApp</a>
     </section>
 
     <!-- CONTATO -->
-    <section id="contato" class="section">
-      <h2 class="section__title" data-i18n="contact.title">Contato</h2>
-      <p class="muted" data-i18n="contact.text">Resposta rápida · PT · ES · EN</p>
-      <a class="btn btn--whatsapp" href="https://wa.me/34616843816" target="_blank" rel="noopener">WhatsApp</a>
+    <section id="contato" class="contact">
+      <h2 class="h2">Contato</h2>
+      <p class="muted">Resposta rápida · PT · ES · EN</p>
+      <a class="btn btn-whatsapp" href="https://wa.me/34616843816" target="_blank" rel="noopener">WhatsApp</a>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="wrap">
       © <span id="year"></span> GoKiteJeri · Jericoacoara, Brasil
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // ano automático no rodapé
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
 
