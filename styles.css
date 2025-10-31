@@ -1,6 +1,6 @@
 :root{
   --bg:#ffffff; --ink:#111; --muted:#6f6f75; --line:#e9e9ee;
-  --card:#f7f7fa; --accent:#0a0a0a;
+  --card:#f7f7fa; --accent:#0a0a0a; --wa:#25D366; --blue:#0077ff;
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
@@ -16,27 +16,30 @@ img{max-width:100%;height:auto;display:block}
 .nav a{color:var(--ink);opacity:.75;margin-left:16px;text-decoration:none}
 .nav a:hover{opacity:1}
 
-/* HERO corregido */
+/* HERO */
 .hero{position:relative;min-height:75vh;display:grid;place-items:center;border-bottom:1px solid var(--line);overflow:hidden}
 .hero-bg{position:absolute;inset:0;background-size:cover;background-position:center center;transform:translateZ(0)}
-.hero-bg::after{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.35));
-}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.3),rgba(0,0,0,.35))}
 .hero-inner{position:relative;text-align:center;color:#fff;padding:64px 0 56px}
 .hero h1{font-size:clamp(32px,5.5vw,56px);line-height:1.06;margin:0 0 8px}
 .lead{font-size:clamp(16px,2.2vw,20px);opacity:.95;margin:0 0 16px}
 .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+/* Botones */
 .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 18px;border-radius:12px;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.06);backdrop-filter: blur(6px);color:#fff;text-decoration:none;font-weight:700}
 .btn:hover{background:rgba(255,255,255,.12)}
-.btn.primary{background:#fff;color:#111;border-color:#fff}
+.btn.primary{background:var(--wa);border-color:var(--wa);color:#fff}
+.btn.primary:hover{background:#1ebe5c}
+.btn.ghost{background:transparent;border-color:rgba(255,255,255,.45);color:#fff}
+.btn.info{background:var(--blue);border-color:var(--blue);color:#fff}
+.btn.info:hover{background:#0068e0}
 
-/* Bloques (fotos no se desbordan) */
+/* Bloques */
 .blocks{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;margin:28px auto}
 .block{grid-column:span 12;display:grid;grid-template-columns:1fr;gap:12px;border:1px solid var(--line);border-radius:16px;padding:14px;background:#fff}
 .block img{width:100%;border-radius:12px;object-fit:cover;aspect-ratio:16/9}
 .block h2{margin:4px 0 6px}
-.block p{margin:0;color:var(--muted)}
+.block p{margin:0 0 10px;color:var(--muted)}
 @media(min-width:880px){ .block{grid-template-columns:5fr 7fr} }
 
 /* Capa visual */
@@ -45,7 +48,21 @@ img{max-width:100%;height:auto;display:block}
 .capa-text{position:absolute;right:24px;bottom:24px;background:rgba(255,255,255,.86);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
 .capa-text h3{margin:0 0 4px}
 
+/* Detalles */
+.detalles{margin:36px auto 12px}
+.detalles h2{margin:0 0 10px}
+.list{margin:0 0 16px;padding-left:18px;color:var(--ink)}
+.list li{margin:6px 0}
+
 /* Contacto / Footer */
 .contacto{text-align:center;margin:36px 0 20px}
 .muted{color:var(--muted)}
 .footer{color:var(--muted);border-top:1px solid var(--line);margin-top:24px;padding-top:16px}
+
+/* Botón flotante WhatsApp móvil */
+.wa-float{
+  position:fixed; right:16px; bottom:16px; width:54px; height:54px;
+  border-radius:50%; background:var(--wa); color:#fff; display:flex; align-items:center; justify-content:center;
+  text-decoration:none; font-weight:900; box-shadow:0 6px 18px rgba(0,0,0,.18); border:1px solid #1ebe5c;
+}
+@media (min-width:980px){ .wa-float{display:none} }
