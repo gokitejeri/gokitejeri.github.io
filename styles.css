@@ -30,7 +30,7 @@ img{max-width:100%; height:auto; display:block}
 .lead{font-size:clamp(16px,2.2vw,20px); opacity:.95; margin:0 0 16px}
 .cta-row{display:flex; gap:12px; justify-content:center; flex-wrap:wrap}
 
-/* Botones (el orden importa: .btn primero, luego variantes) */
+/* Botones */
 .btn{
   display:inline-flex; align-items:center; justify-content:center;
   padding:14px 18px; border-radius:12px; border:1px solid rgba(255,255,255,.35);
@@ -38,7 +38,7 @@ img{max-width:100%; height:auto; display:block}
   color:#fff; text-decoration:none; font-weight:700
 }
 .btn:hover{background:rgba(255,255,255,.12)}
-.btn.primary{background:var(--wa); border-color:var(--wa); color:#fff !important}
+.btn.primary{background:var(--wa); border-color:var(--wa); color:#fff}
 .btn.primary:hover{background:#1ebe5c}
 .btn.ghost{background:transparent; border-color:rgba(255,255,255,.45); color:#fff}
 .btn.info{background:var(--blue); border-color:var(--blue); color:#fff}
@@ -55,7 +55,7 @@ img{max-width:100%; height:auto; display:block}
 .block p{margin:0 0 10px; color:var(--muted)}
 @media(min-width:880px){ .block{grid-template-columns:5fr 7fr} }
 
-/* CAPA: ahora con fondo cover para ajustar 100% */
+/* CAPA cover */
 .capa{margin:32px 0; position:relative; border-radius:16px; overflow:hidden; border:1px solid var(--line)}
 .capa-bg{width:100%; height:0; padding-bottom:42%; background-size:cover; background-position:center}
 .capa-text{
