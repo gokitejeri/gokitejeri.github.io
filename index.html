@@ -11,28 +11,32 @@
 
 <body>
   <!-- HEADER -->
- <header class="navbar">
-    <div class="brand">
-        <img src="assets/img/logo.jpg" alt="GoKiteJeri Logo" class="logo">
-        <span class="brand-name">GoKiteJeri</span>
-    </div>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#">
+      <img src="assets/img/logo.jpg" alt="GoKiteJeri" class="brand-img">
+      <span class="brand-name">GoKiteJeri</span>
+    </a>
 
-    <nav class="nav-links">
-        <a href="#aulas">Aulas</a>
-        <a href="#downwind">Downwind</a>
-        <a href="#contato">Contato</a>
+    <nav class="menu">
+      <a href="#aulas" class="menu-link">Aulas</a>
+      <a href="#downwind" class="menu-link">Downwind</a>
+      <a href="#contato" class="menu-link">Contato</a>
     </nav>
 
-    <!-- Language Switch -->
     <div class="lang-switch">
-        <button id="pt-btn" class="lang-btn active">
-            🇧🇷 PT
-        </button>
-        <button id="en-btn" class="lang-btn">
-            🇬🇧 EN
-        </button>
+      <a href="?lang=en" class="pill">
+        <img src="https://flagcdn.com/gb.svg" width="20" style="vertical-align:middle;">
+        <span class="pill-text">EN</span>
+      </a>
+      <a href="?lang=pt" class="pill">
+        <img src="https://flagcdn.com/br.svg" width="20" style="vertical-align:middle;">
+        <span class="pill-text">PT</span>
+      </a>
     </div>
+  </div>
 </header>
+
 
 
   <!-- HERO -->
