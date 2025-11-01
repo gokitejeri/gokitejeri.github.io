@@ -144,3 +144,21 @@ html, body { overflow-x: hidden; }
 
 /* Mejora el scroll a anclas con header sticky */
 section, [id] { scroll-margin-top: 84px; }
+/* === Hero mobile – keep full look but move framing === */
+@media (max-width: 768px){
+  .hero{ min-height: 70vh; }
+
+  .hero-bg{
+    background-size: cover;
+    background-position: 72% center; /* foco hacia ti y buggy */
+  }
+
+  .hero h1{
+    font-size: clamp(26px, 6vw, 44px);
+  }
+
+  .lead{
+    font-size: 15px;
+    line-height: 1.35;
+  }
+}
