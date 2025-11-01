@@ -211,3 +211,26 @@ section, [id] { scroll-margin-top: 84px; }
     background: rgba(0,0,0,.45) !important;
   }
 }
+/* --- HERO móvil (≤640px) --- */
+@media (max-width:640px){
+  .hero,
+  .hero-bg{ width:100%; }
+
+  .hero{ min-height:75vh !important; }  /* menos alto para que no “aplane” la foto */
+
+  .hero-bg{
+    /* usa la foto vertical/centrada para móvil */
+    background-image:url('assets/img/capa.jpg') !important;
+    background-size:cover !important;          /* SIN bandas negras */
+    background-position:center 35% !important; /* sube un poco el encuadre */
+    background-repeat:no-repeat !important;
+  }
+
+  /* overlay un poco más fuerte para mejorar legibilidad */
+  .hero:after{ background: rgba(0,0,0,.45) !important; }
+
+  /* tipografías y botones más equilibrados en móvil */
+  .hero h1{ font-size:clamp(26px,7vw,42px); }
+  .lead{ font-size:clamp(14px,3.8vw,18px); }
+  .cta-row{ gap:10px; flex-wrap:wrap; }
+}
