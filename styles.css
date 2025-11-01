@@ -35,10 +35,22 @@ body{font-family:var(--font); color:#111; background:#f6f7f9; line-height:1.55}
 /* Hero */
 .hero{position:relative; min-height:72vh; display:grid; place-items:center}
 .hero-bg{position:absolute; inset:0; background:url("assets/img/hero.jpg") center/cover no-repeat;}
-.hero::after{content:""; position:absolute; inset:0; background:
-  radial-gradient(1200px 600px at 50% 30%, #00000088 0%, #00000066 40%, #0000 70%),
-  linear-gradient(#00000066,#00000066);
-  opacity:.55}
+.hero::after {
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(1200px 600px at 50% 30%, #00000088 0%, #00000066 40%, #0000 70%),
+        linear-gradient(#00000066, #00000066);
+    opacity:.55;
+    pointer-events: none; /* ← IMPORTANTE */
+}
+.hero-buttons {
+    position: relative;
+    z-index: 5;
+    pointer-events: auto;
+}
+
 .hero-inner{position:relative; text-align:center; color:#fff; padding:24px}
 .hero h1{font-size:clamp(28px,5vw,56px); line-height:1.05; margin:0 0 8px}
 .lead{opacity:.9; margin:0 0 18px}
