@@ -90,3 +90,24 @@ document.querySelectorAll("[data-i18n]").forEach(el=>{
 
 // Año en footer
 document.getElementById("yy").textContent = new Date().getFullYear();
+/* ===== PATCH 02 — Smooth scroll a secciones y compatibilidad móvil ===== */
+(() => {
+  // Smooth scroll para enlaces internos tipo #aulas, #downwind, #contato
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    const id = a.getAttribute('href').slice(1);
+    const el = document.getElementById(id);
+    if (!el) return;
+    e.preventDefault();
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  // Evita zoom accidental al tocar dos veces rápido en iOS (sin romper accesibilidad)
+  let lastTouch = 0;
+  document.addEventListener('touchend', (e) => {
+    const now = Date.now();
+    if (now - lastTouch <= 350) e.preventDefault();
+    lastTouch = now;
+  }, { passive:false });
+})();

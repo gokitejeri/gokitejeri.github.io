@@ -92,3 +92,55 @@ body{font-family:var(--font); color:#111; background:#f6f7f9; line-height:1.55}
 .muted{color:#666}
 
 .footer{margin-top:40px; padding:22px 0; border-top:1px solid #eee; color:#666; background:#fafbfc}
+/* ===== PATCH 02 — HEADER & MENÚ MÓVIL ESTABLE ===== */
+
+/* Evita scroll horizontal por desbordes accidentales */
+html, body { overflow-x: hidden; }
+
+/* Altura mínima constante del header para que no cambie al cargar */
+.nav { position: sticky; top: 0; z-index: 40; background: #fff8; backdrop-filter: saturate(1.2) blur(8px); }
+.nav .wrap { display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:64px; }
+
+/* Enlaces del menú: tamaño táctil cómodo */
+.menu { display:flex; gap:16px; }
+.menu-link { color:#222; text-decoration:none; padding:10px 8px; border-radius:8px; }
+.menu-link:hover { background:#0000000d; }
+
+/* Pastillas de idioma */
+.lang-switch { display:flex; gap:8px; }
+.pill { display:inline-flex; align-items:center; gap:6px; padding:6px 10px; border-radius:999px; border:1px solid #ddd; background:#fff; color:#222; text-decoration:none; }
+.pill:hover { box-shadow:0 0 3px #00000033; }
+.flag { font-size:16px; line-height:1; }
+
+/* Hero: nos aseguramos de que la capa NO bloquee los botones */
+.hero { position:relative; min-height:72vh; display:grid; place-items:center; }
+.hero-bg { position:absolute; inset:0; background:url("assets/img/hero.jpg") center/cover no-repeat; }
+.hero::after {
+  content:"";
+  position:absolute; inset:0;
+  background:
+    radial-gradient(1200px 600px at 50% 30%, #00000088 0%, #00000066 40%, #0000 70%),
+    linear-gradient(#00000066, #00000066);
+  opacity:.55;
+  pointer-events: none; /* <- IMPRESCINDIBLE */
+}
+.hero-buttons { position:relative; z-index:5; pointer-events:auto; }
+
+/* Botones (aseguramos buen tap target) */
+.btn { display:inline-flex; align-items:center; justify-content:center; padding:12px 18px; border-radius:999px; border:1px solid #fff3; text-decoration:none; font-weight:600; transition:.25s ease; box-shadow:1px 2px 0 #00000025; }
+.btn:hover { filter:brightness(1.05); }
+
+/* --------- Responsive --------- */
+@media (max-width: 900px) {
+  .brand-name { display:none; }        /* dejas solo el logo para ahorrar espacio */
+}
+
+@media (max-width: 680px) {
+  .menu-link { padding:14px 8px; font-size:15px; }
+  .lang-switch .pill-text { display:none; }   /* muestra solo la bandera en móvil */
+  .lang-switch .flag { font-size:18px; }
+  .nav .wrap { gap:12px; }
+}
+
+/* Mejora el scroll a anclas con header sticky */
+section, [id] { scroll-margin-top: 84px; }
