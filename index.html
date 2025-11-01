@@ -44,17 +44,29 @@
   </header>
 
   <!-- ===== HERO ===== -->
-  <section class="hero">
-    <div class="hero-bg" role="img" aria-label="Kitesurf Jericoacoara"></div>
-    <div class="hero-inner">
-      <h1 data-i18n="hero_title">Jeri. Vento. Liberdade.</h1>
-      <p class="lead" data-i18n="hero_sub">Aulas particulares e experiências reais em Jericoacoara.</p>
-      <div class="cta-row">
-        <a class="btn btn-wa" id="waTop" target="_blank" data-i18n="btn_whatsapp">Falar no WhatsApp</a>
-        <a class="btn btn-ghost" href="#aulas" data-i18n="btn_more">Ver mais</a>
-      </div>
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <picture>
+      <!-- MÓVIL: foto completa -->
+      <source media="(max-width: 640px)" srcset="assets/img/capa.jpg">
+      <!-- DESKTOP/TABLET -->
+      <img src="assets/img/hero.jpg" alt="Kitesurf em Jericoacoara" class="hero-img">
+    </picture>
+  </div>
+
+  <div class="hero-inner">
+    <h1 class="hi">Jeri. Wind. Freedom.</h1>
+    <p class="lead" data-i18n="lead">Private lessons and real experiences in Jericoacoara.</p>
+
+    <div class="hero-buttons cta-row">
+      <a class="btn" href="https://wa.me/5585999206771" target="_blank" rel="noopener">
+        Chat on WhatsApp
+      </a>
+      <a class="btn btn-ghost btn-info" href="#aulas">See more</a>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- ===== AULAS ===== -->
   <main class="wrap">
