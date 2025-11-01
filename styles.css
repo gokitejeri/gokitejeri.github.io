@@ -195,3 +195,19 @@ section, [id] { scroll-margin-top: 84px; }
     background:#0b0d10;              /* bandas de relleno neutras si sobra espacio */
   }
 }
+/* Mobile hero image fix */
+@media (max-width:640px) {
+  .hero-bg {
+    background-size: contain !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+  }
+  
+  .hero {
+    min-height: 90vh !important;
+  }
+
+  .hero:after {
+    background: rgba(0,0,0,.45) !important;
+  }
+}
