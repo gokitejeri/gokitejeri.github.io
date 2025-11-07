@@ -375,7 +375,9 @@ body.lang-en .lang-pt {
 
 body.lang-en .lang-en {
   display: inline;
-}
+-
+
+
 
 /* RESPONSIVE */
 
@@ -389,4 +391,11 @@ body.lang-en .lang-en {
   .hero-content {
     text-align: left;
   }
+
+.map-wrapper {
+  margin-top: 20px;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12);
+}
 }
