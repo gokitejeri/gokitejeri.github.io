@@ -2,158 +2,123 @@
 <html lang="pt">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
- />
-  <title>GoKiteJeri — Kitesurf em Jericoacoara</title>
-  <meta name="description" content="Aulas particulares de kitesurf e experiências reais em Jericoacoara." />
-  <link rel="preload" as="image" href="assets/img/hero.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoKiteJeri – Kitesurf Lessons & Experiences in Jericoacoara</title>
+  <meta name="description" content="Private kitesurf lessons, downwind tours and exclusive experiences in Jericoacoara. Certified instructors and passion for the sea." />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="custom.css" />
+  <!-- Preload hero image -->
+  <link rel="preload" as="image" href="assets/img/hero.jpg" />
 </head>
 <body>
-
-<link rel="stylesheet" href="custom.css" />
-  <!-- ===== HEADER ===== -->
+  <!-- ===== NAVBAR ===== -->
   <header class="nav">
-    <div class="wrap">
-      <a class="brand" href="#">
-        <img src="assets/img/logo.jpg" alt="GoKiteJeri" class="brand-img" />
+    <div class="container">
+      <a href="#" class="brand">
+        <img src="assets/img/logo.jpg" alt="Logotipo de GoKiteJeri" class="brand-img">
         <span class="brand-name">GoKiteJeri</span>
       </a>
-
-      <nav class="menu">
-        <a href="#aulas" class="menu-link" data-i18n="nav_classes">Aulas</a>
-        <a href="#downwind" class="menu-link">Downwind</a>
-        <a href="#contato" class="menu-link" data-i18n="nav_contact">Contato</a>
+      <nav class="main-menu">
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre nós</a>
+        <a href="#vantagens">Porquê escolher-nos</a>
+        <a href="#contacto">Contato</a>
       </nav>
-
-      <!-- Idiomas -->
-      <div class="lang-switch">
-        <a href="?lang=en" class="pill" aria-label="English">
-          <span class="flag">🇬🇧</span>
-          <span class="pill-text">EN</span>
-        </a>
-        <a href="?lang=es" class="pill" aria-label="Español">
-          <span class="flag">🇪🇸</span>
-          <span class="pill-text">ES</span>
-        </a>
-        <a href="?lang=pt" class="pill" aria-label="Português">
-          <span class="flag">🇵🇹</span>
-          <span class="pill-text">PT</span>
-        </a>
+      <div class="contact-info">
+        <a href="https://wa.me/5585999206771" class="whatsapp-link">WhatsApp: +55 85 99920‑6771</a>
       </div>
     </div>
   </header>
 
   <!-- ===== HERO ===== -->
-<section class="hero" id="home">
-  <div class="hero-bg">
+  <section class="hero">
     <picture>
-      <!-- MÓVIL: foto completa -->
+      <!-- Foto completa para mobile -->
       <source media="(max-width: 640px)" srcset="assets/img/capa.jpg">
-      <!-- DESKTOP/TABLET -->
-      <img src="assets/img/hero.jpg" alt="Kitesurf em Jericoacoara" class="hero-img">
+      <!-- Foto horizontal para desktop -->
+      <img src="assets/img/hero.jpg" alt="Kitesurf en Jericoacoara al atardecer" class="hero-img">
     </picture>
-  </div>
-
-  <div class="hero-inner">
-    <h1 class="hi">Jeri. Wind. Freedom.</h1>
-    <p class="lead" data-i18n="lead">Private lessons and real experiences in Jericoacoara.</p>
-
-    <div class="hero-buttons cta-row">
-      <a class="btn-whatsapp" href="https://wa.me/5585999206771" target="_blank" rel="noopener">
-  Chat on WhatsApp
-</a>
-
-
-  <!-- ===== AULAS ===== -->
-  <main class="wrap">
-    <h2 id="aulas" class="section-title" data-i18n="sec_classes">Aulas particulares</h2>
-
-    <div class="grid3">
-      <!-- Card 1 -->
-      <article class="card">
-        <img src="assets/img/c1.jpg" class="card-img" alt="Aula 1:1" />
-        <div class="card-body">
-          <h3 class="card-title" data-i18n="card1_title">Aula 1:1</h3>
-          <p class="card-text" data-i18n="card1_text">
-            Foco total em você. Método seguro e progressivo. Equipamento completo incluído.
-          </p>
-          <div class="card-actions">
-            <a class="btn btn-wa" id="wa1" target="_blank" data-i18n="btn_reserve">Reservar</a>
-            <a class="btn btn-info" href="#detalhes" data-i18n="btn_info">Mais informações</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Card 2 -->
-      <article class="card" id="downwind">
-        <img src="assets/img/c2.jpg" class="card-img" alt="Downwind & Progressão" />
-        <div class="card-body">
-          <h3 class="card-title">Downwind & Progressão</h3>
-          <p class="card-text" data-i18n="card2_text">
-            Evolução real em vento e mar aberto. Apoio dedicado.
-          </p>
-          <div class="card-actions">
-            <a class="btn btn-wa" id="wa2" target="_blank" data-i18n="btn_reserve">Reservar</a>
-            <a class="btn btn-info" href="#detalhes" data-i18n="btn_info">Mais informações</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Card 3 -->
-      <article class="card">
-        <img src="assets/img/c3.jpg" class="card-img" alt="Jeri lifestyle" />
-        <div class="card-body">
-          <h3 class="card-title">Jeri lifestyle</h3>
-          <p class="card-text" data-i18n="card3_text">
-            Pôr do sol, lagoas e vibe local. Lado autêntico, sem turistão.
-          </p>
-          <div class="card-actions">
-            <a class="btn btn-wa" id="wa3" target="_blank" data-i18n="btn_reserve">Reservar</a>
-            <a class="btn btn-info" href="#detalhes" data-i18n="btn_info">Mais informações</a>
-          </div>
-        </div>
-      </article>
+    <div class="hero-content">
+      <h1>Viento, Mar & Libertad</h1>
+      <p>Vive la experiencia de kitesurf más auténtica de Jericoacoara con clases privadas, downwinds y aventuras a medida.</p>
+      <a class="btn-primary" href="https://wa.me/5585999206771">Reserva tu clase</a>
     </div>
+  </section>
 
-    <!-- CAPA / POSTER -->
-    <section class="capa">
-      <img src="assets/img/capa.jpg" class="capa-img" alt="GoKiteJeri poster" />
-      <div class="note">
-        <strong data-i18n="note_title">By recommendation only</strong>
-        <p data-i18n="note_text">
-          Trabalhamos com cupos limitados. Se não há disponibilidade, te recomendamos alternativas fiáveis.
-        </p>
+  <!-- ===== SERVICIOS ===== -->
+  <section id="servicos" class="services">
+    <div class="container">
+      <h2>Nuestros servicios</h2>
+      <div class="service-grid">
+        <!-- Servicio 1 -->
+        <article class="service-card">
+          <img src="assets/img/c1.jpg" alt="Clase particular de kitesurf en la laguna de Jericoacoara" class="service-img">
+          <h3>Clases 1:1</h3>
+          <p>Aprende a tu ritmo con un instructor dedicado. Todo el material incluido y metodología segura y progresiva.</p>
+          <a class="btn-secondary" href="https://wa.me/5585999206771?text=Quiero%20reservar%20una%20clase%20particular">Reservar</a>
+        </article>
+        <!-- Servicio 2 -->
+        <article class="service-card">
+          <img src="assets/img/c2.jpg" alt="Kitesurf downwind y progresión en mar abierto" class="service-img">
+          <h3>Downwind & Progresión</h3>
+          <p>Vuela sobre aguas abiertas y mejora tu nivel acompañado de un equipo de apoyo y jet ski.</p>
+          <a class="btn-secondary" href="https://wa.me/5585999206771?text=Quiero%20hacer%20downwind%20en%20Jeri">Reservar</a>
+        </article>
+        <!-- Servicio 3 -->
+        <article class="service-card">
+          <img src="assets/img/c3.jpg" alt="Paseo en buggy disfrutando del estilo de vida de Jeri" class="service-img">
+          <h3>Experiencia Jeri</h3>
+          <p>Descubre el auténtico estilo de vida local: atardeceres mágicos, lagunas cristalinas y aventuras sin turistas.</p>
+          <a class="btn-secondary" href="https://wa.me/5585999206771?text=Quiero%20vivir%20la%20experiencia%20Jeri">Reservar</a>
+        </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- DETALHES -->
-    <section id="detalhes" class="details">
-      <h2 class="section-title" data-i18n="sec_details">Detalhes das aulas</h2>
-      <ul class="list">
-        <li><strong data-i18n="li_dur">Duração: 3 horas por sessão</strong></li>
-        <li data-i18n="li_incl">Inclui: equipamento completo</li>
-        <li data-i18n="li_spot">Spot: lagoa + mar aberto (conforme condições)</li>
-        <li data-i18n="li_sec">Segurança: progressão e suporte completo</li>
-        <li data-i18n="li_lang">Idiomas: PT · ES · EN</li>
-      </ul>
-      <a class="btn btn-wa" id="waBottom" target="_blank" data-i18n="btn_whatsapp">Reservar no WhatsApp</a>
-    </section>
+  <!-- ===== SOBRE NOSOTROS ===== -->
+  <section id="sobre" class="about">
+    <div class="container">
+      <h2>Sobre nosotros</h2>
+      <p>Somos una escuela de kitesurf apasionada ubicada en el corazón de Jericoacoara. Nuestro equipo está compuesto por instructores certificados con años de experiencia que comparten un amor profundo por el viento, el mar y la libertad. Creemos en un aprendizaje seguro, divertido y personalizado, adaptado a cada alumno.</p>
+      <p>Utilizamos equipos de alta calidad y respetuosos con el medio ambiente. Nos encargamos de todo para que tú solo disfrutes de cada sesión.</p>
+    </div>
+  </section>
 
-    <!-- CONTATO -->
-    <section id="contato" class="contact">
-      <h2 class="section-title" data-i18n="sec_contact">Contato</h2>
-      <p class="muted" data-i18n="contact_desc">Resposta rápida · PT · ES · EN</p>
-      <a class="btn btn-wa" id="waContact" target="_blank">WhatsApp</a>
-    </section>
-  </main>
+  <!-- ===== VENTAJAS ===== -->
+  <section id="vantagens" class="advantages">
+    <div class="container">
+      <h2>Por qué elegir GoKiteJeri</h2>
+      <div class="advantages-grid">
+        <div class="adv-item">
+          <h4>Instructores certificados</h4>
+          <p>Nuestro equipo tiene certificaciones internacionales y experiencia en enseñar a todos los niveles.</p>
+        </div>
+        <div class="adv-item">
+          <h4>Spot privilegiado</h4>
+          <p>Jericoacoara ofrece viento constante y aguas seguras, perfectas para aprender y progresar.</p>
+        </div>
+        <div class="adv-item">
+          <h4>Apoyo y seguridad</h4>
+          <p>Utilizamos jet ski y embarcaciones de apoyo para garantizar tu seguridad y maximizar el tiempo en el agua.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section id="contacto" class="contact">
+    <div class="container">
+      <h2>Contacto</h2>
+      <p>¿Listo para volar sobre las olas? Contáctanos y planifica tu próxima aventura en Jeri.</p>
+      <a class="btn-primary" href="https://wa.me/5585999206771">Hablar por WhatsApp</a>
+      <p>O envíanos un correo a <a href="mailto:info@gokitejeri.com">info@gokitejeri.com</a></p>
+    </div>
+  </section>
 
   <footer class="footer">
-    <div class="wrap">
-      <small>© <span id="yy"></span> GoKiteJeri · Jericoacoara, Brasil</small>
+    <div class="container">
+      <p>&copy; 2025 GoKiteJeri – Todos los derechos reservados.</p>
     </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
