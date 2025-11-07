@@ -334,6 +334,39 @@ body {
   background-color: #f5f5f7;
 }
 
+/* Atlas: Ajuste Hero sin blur */
+.hero {
+  background: url('assets/img/hero.jpg') center center / cover no-repeat;
+  filter: none !important;
+  backdrop-filter: none !important;
+}
+
+.hero-bg {
+  display: none !important;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+/* Atlas: Ajuste Hero override sin blur */
+.hero {
+  background: url('assets/img/hero.jpg') center center / cover no-repeat !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+}
+
+.hero::after {
+  background: rgba(0,0,0,0.35) !important;
+}
+
+.hero-bg {
+  display: none !important;
+}
+
   .hero{ min-height:75vh !important; }  /* menos alto para que no “aplane” la foto */
 
   .hero-bg{
