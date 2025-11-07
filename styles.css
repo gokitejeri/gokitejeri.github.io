@@ -397,6 +397,30 @@ body {
   background: rgba(0,0,0,0.35) !important;
 }
 
+/* Fix global backgrounds and hero as per new instructions */
+html, body, main {
+  background: none !important;
+  background-image: none !important;
+  background-color: #f4f4f4 !important;
+}
+
+body {
+  background-color: #f4f4f4 !important;
+}
+
+.hero {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('assets/img/hero.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+}
+
+.hero::after, .hero-bg {
+  display: none !important;
+}
+
   .hero{ min-height:75vh !important; }  /* menos alto para que no “aplane” la foto */
 
   .hero-bg{
