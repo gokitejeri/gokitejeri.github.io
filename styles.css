@@ -97,8 +97,8 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  color: #fff;
   padding: 80px 10%;
+  color: #fff;
 }
 
 .hero::before {
@@ -110,19 +110,6 @@ main {
     rgba(0, 0, 0, 0.45),
     rgba(0, 0, 0, 0.35)
   );
-}
-
-.hero h1,
-.hero p {
-  color: #fff;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.45);
-}
-
-.hero-content {
-  position: relative;
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
 }
 
 .hero-title {
@@ -140,6 +127,12 @@ main {
   font-size: 11px;
   opacity: 0.9;
   margin-top: 6px;
+}
+
+.hero h1,
+.hero p {
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.45);
 }
 
 .hero-buttons {
@@ -262,42 +255,10 @@ footer {
     align-items: center;
     text-align: center;
   }
-  .hero-content {
-    align-items: center;
+  .hero-buttons {
+    justify-content: center;
   }
-  .card
-/* Hero override and logo adjustments */
-.hero {
-  position: relative;
-  background-image: url('assets/img/hero.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  min-height: 420px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  color: #fff;
-  padding: 80px 10%;
-}
-
-.hero h1,
-.hero p {
-  color: #fff;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.45);
-}
-
-.logo img {
-  height: 40px;
-  max-width: 160px;
-  object-fit: contain;
-}
-
-header {
-  background-color: #ffffff;
-}
-s {
+  .cards {
     grid-template-columns: 1fr;
   }
 }
