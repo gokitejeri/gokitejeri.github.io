@@ -121,7 +121,7 @@ body {
   padding: 120px 16px 90px;
   background-image: url("assets/img/hero.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
   color: #ffffff;
 }
