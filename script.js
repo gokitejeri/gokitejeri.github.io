@@ -1,3 +1,5 @@
+Script.js  
+
 // Toggle idioma PT / EN
 document.querySelectorAll('.lang-btn').forEach((btn) => {
   btn.addEventListener('click', () => {
