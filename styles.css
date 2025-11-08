@@ -390,3 +390,11 @@ body.lang-en .lang-en {
     text-align: left;
   }
 }
+/* --- FIX VISUAL DE LAS IMÁGENES DE TÉCNICAS --- */
+.card-img {
+  width: 100%;
+  height: 220px;       /* puedes ajustar a 180 o 250 según gusto */
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
