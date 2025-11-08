@@ -1,44 +1,52 @@
-Script.js  
-
-// Toggle idioma PT / EN
-document.querySelectorAll('.lang-btn').forEach((btn) => {
-  btn.addEventListener('click', () => {
-    const lang = btn.getAttribute('data-lang');
-    document.body.classList.toggle('lang-en', lang === 'en');
-
-    document.querySelectorAll('.lang-btn').forEach((b) =>
-      b.classList.toggle('active', b === btn)
-    );
+// Idioma
+function setLanguage(lang) {
+  // Botões
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
   });
-});
 
-// Toggle Mais informações (detalhes 3 dias)
-const detailsSection = document.querySelector('#detalhes-3dias');
-
-document.querySelectorAll('.btn-more').forEach((btn) => {
-  btn.addEventListener('click', (e) => {
-    e.preventDefault();
-    if (!detailsSection) return;
-
-    const isOpen = detailsSection.classList.contains('open');
-    detailsSection.classList.toggle('open', !isOpen);
-
-    if (!isOpen) {
-      detailsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  // Textos
+  document.querySelectorAll('.lang').forEach(el => {
+    if (el.classList.contains('lang-' + lang)) {
+      el.style.display = '';
+    } else {
+      el.style.display = 'none';
     }
   });
-});
 
-// Scroll suave para links internos (nav, etc.)
-document.querySelectorAll('a[href^="#"]').forEach((link) => {
-  link.addEventListener('click', (e) => {
-    const targetId = link.getAttribute('href').substring(1);
-    const target = document.getElementById(targetId);
-    if (target) {
+  // Atualizar atributo lang do HTML
+  document.documentElement.lang = lang === 'en' ? 'en' : 'pt';
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Idioma default PT
+  setLanguage('pt');
+
+  // Clique nos botões de idioma
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      setLanguage(btn.dataset.lang);
+    });
+  });
+
+  // Botões "Mais informações"
+  document.querySelectorAll('.btn-more').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetSelector = btn.getAttribute('data-target') || '#detalhes-3dias';
+      const section = document.querySelector(targetSelector);
+      if (!section) return;
+
+      section.classList.remove('collapsed');
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  // Logo vai para o topo (já é #top no href, mas garantimos smooth)
+  const logoLink = document.querySelector('.logo');
+  if (logoLink) {
+    logoLink.addEventListener('click', (e) => {
       e.preventDefault();
-      const offset = 80;
-      const top = target.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top, behavior: 'smooth' });
-    }
-  });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 });
