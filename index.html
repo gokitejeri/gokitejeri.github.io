@@ -1,73 +1,414 @@
-/* HERO */
-.hero {
-  position: relative;
-  background-image: url('assets/img/hero.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  min-height: 420px;
-  display: flex;
-  align-items: center;
-  color: #fff;
-}
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.35); /* más claro, antes estaba muy escuro */
-}
+  <title>GoKiteJeri — Escola de Kitesurf em Jericoacoara | Curso 3 dias, aulas privadas</title>
 
-.hero-content {
-  position: relative;
-  z-index: 1;
-}
+  <!-- SEO -->
+  <meta name="description" content="GoKiteJeri é uma escola local de kitesurf em Jericoacoara. Aulas particulares, curso intensivo de 3 dias (9h), técnicas como body drag e water start, downwind e experiências reais. Falamos PT, ES e EN." />
+  <link rel="canonical" href="https://gokitejeri.com/" />
 
-/* CARDS GRID (usado em todas as seções) */
-.cards-grid {
-  display: grid;
-  gap: 24px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
+  <!-- Open Graph -->
+  <meta property="og:title" content="GoKiteJeri — Escola de Kitesurf em Jericoacoara" />
+  <meta property="og:description" content="Aulas particulares de kitesurf, curso intensivo 3 dias, técnicas completas e experiências reais em Jericoacoara. Instrutores locais. PT, ES, EN." />
+  <meta property="og:image" content="https://gokitejeri.com/assets/img/hero.jpg" />
+  <meta property="og:url" content="https://gokitejeri.com/" />
+  <meta property="og:type" content="website" />
 
-.card {
-  background: #ffffff;
-  border-radius: 18px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-.card-img {
-  width: 100%;
-  height: 190px;
-  object-fit: cover;
-  display: block;
-}
-
-.card-body {
-  padding: 16px 18px 18px;
-}
-
-.card-actions {
-  display: flex;
-  gap: 8px;
-  margin-top: 10px;
-  flex-wrap: wrap;
-}
-
-/* MAPA */
-.map-wrapper {
-  margin-top: 24px;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .cards-grid {
-    grid-template-columns: 1fr;
+  <!-- JSON-LD LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsActivityLocation",
+    "name": "GoKiteJeri",
+    "description": "Escola local de kitesurf em Jericoacoara com aulas particulares, curso intensivo de 3 dias, downwinds e experiências personalizadas.",
+    "url": "https://gokitejeri.com/",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Jericoacoara",
+      "addressRegion": "CE",
+      "addressCountry": "BR"
+    },
+    "telephone": "+34 616 843 816",
+    "sameAs": []
   }
-}
+  </script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo">
+        <img src="assets/img/logo.jpg" alt="GoKiteJeri kitesurf school logo" />
+        <span>GoKiteJeri</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="#aulas">Aulas</a>
+        <a href="#detalhes-3dias">Pacote 3 dias</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="pt">🇧🇷 PT</button>
+        <button class="lang-btn" data-lang="en">🇬🇧 EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <h1 class="lang lang-pt">Jeri. Vento. Liberdade.</h1>
+        <h1 class="lang lang-en">Jeri. Wind. Freedom.</h1>
+
+        <p class="hero-subtitle lang lang-pt">
+          Aulas particulares de kitesurf em Jericoacoara, com segurança e equipamento incluído.
+        </p>
+        <p class="hero-subtitle lang lang-en">
+          Private kitesurf lessons in Jericoacoara with safety and full equipment.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-whatsapp" href="https://wa.me/34616843816" target="_blank" rel="noopener">
+            💬 WhatsApp
+          </a>
+          <a class="btn btn-outline" href="#aulas">
+            ℹ️ <span class="lang lang-pt">Ver opções</span>
+            <span class="lang lang-en">See options</span>
+          </a>
+        </div>
+
+        <p class="hero-note lang lang-pt">
+          Nossos instrutores locais · Experiência real · PT · ES · EN
+        </p>
+        <p class="hero-note lang lang-en">
+          Local instructors · Real experience · PT · ES · EN
+        </p>
+      </div>
+    </section>
+
+    <!-- AULAS / CARDS PRINCIPAIS -->
+    <section id="aulas" class="section">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="lang lang-pt">Aulas & Experiências</span>
+          <span class="lang lang-en">Lessons & Experiences</span>
+        </h2>
+
+        <div class="cards-grid">
+          <!-- CARD 1: Curso 3 dias -->
+          <article class="card">
+            <img src="assets/img/c1.jpg" alt="Curso intensivo de kitesurf em Jericoacoara" class="card-img" />
+            <div class="card-body">
+              <h3 class="lang lang-pt">Curso Intensivo — 3 dias (9h)</h3>
+              <h3 class="lang lang-en">Intensive Course — 3 days (9h)</h3>
+
+              <p class="lang lang-pt">
+                Comece do zero com segurança: 3 dias, 3h por dia, apoio total e equipamento incluído.
+              </p>
+              <p class="lang lang-en">
+                Start from zero safely: 3 days, 3h per day, full support and equipment included.
+              </p>
+
+              <div class="card-actions">
+                <button class="btn btn-info btn-more" data-target="#detalhes-3dias">
+                  <span class="lang lang-pt">Mais informações</span>
+                  <span class="lang lang-en">More info</span>
+                </button>
+                <a href="https://wa.me/34616843816" target="_blank" rel="noopener" class="btn btn-whatsapp">
+                  <span class="lang lang-pt">Reservar</span>
+                  <span class="lang lang-en">Book now</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 2: Intermediário -->
+          <article class="card">
+            <img src="assets/img/c2.jpg" alt="Aulas intermediárias e progressão de kitesurf" class="card-img" />
+            <div class="card-body">
+              <h3 class="lang lang-pt">Intermediário & Progressão</h3>
+              <h3 class="lang lang-en">Intermediate & Progression</h3>
+
+              <p class="lang lang-pt">
+                Upwind, transições, vento forte e controle fino. Sessões 100% focadas em você.
+              </p>
+              <p class="lang lang-en">
+                Upwind, transitions and strong wind control. 100% focused coaching.
+              </p>
+
+              <div class="card-actions">
+                <button class="btn btn-info btn-more" data-target="#detalhes-3dias">
+                  <span class="lang lang-pt">Mais informações</span>
+                  <span class="lang lang-en">More info</span>
+                </button>
+                <a href="https://wa.me/34616843816" target="_blank" rel="noopener" class="btn btn-whatsapp">
+                  <span class="lang lang-pt">Reservar</span>
+                  <span class="lang lang-en">Book now</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 3: Buggy & Lifestyle -->
+          <article class="card">
+            <img src="assets/img/c3.jpg" alt="Passeios de buggy e lifestyle em Jericoacoara" class="card-img" />
+            <div class="card-body">
+              <h3 class="lang lang-pt">Buggy & Lifestyle Jeri</h3>
+              <h3 class="lang lang-en">Buggy & Jeri Lifestyle</h3>
+
+              <p class="lang lang-pt">
+                Lagoas, pôr do sol e o lado autêntico de Jeri. Roteiros sob medida.
+              </p>
+              <p class="lang lang-en">
+                Lagoons, sunset and real Jeri lifestyle. Custom experiences.
+              </p>
+
+              <div class="card-actions">
+                <button class="btn btn-info btn-more" data-target="#detalhes-3dias">
+                  <span class="lang lang-pt">Mais informações</span>
+                  <span class="lang lang-en">More info</span>
+                </button>
+                <a href="https://wa.me/34616843816" target="_blank" rel="noopener" class="btn btn-whatsapp">
+                  <span class="lang lang-pt">Reservar</span>
+                  <span class="lang lang-en">Book now</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DETALHES CURSO 3 DIAS -->
+    <section id="detalhes-3dias" class="section details collapsed">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="lang lang-pt">Como funciona o curso intensivo de 3 dias</span>
+          <span class="lang lang-en">How the 3-day intensive course works</span>
+        </h2>
+
+        <div class="details-grid">
+          <div>
+            <h3 class="lang lang-pt">Dia 1 — Controle e segurança</h3>
+            <p class="lang lang-pt">
+              Teoria rápida, montagem do equipamento, janelas de vento, sistemas de segurança e primeiros
+              exercícios de controle na praia. Base sólida para evoluir tranquilo.
+            </p>
+
+            <h3 class="lang lang-pt">Dia 2 — Body drag & água</h3>
+            <p class="lang lang-pt">
+              Body drag em várias direções, recuperação da prancha e leitura do spot. Constrói confiança
+              e domínio do kite na água.
+            </p>
+
+            <h3 class="lang lang-pt">Dia 3 — Water start & primeiros rides</h3>
+            <p class="lang lang-pt">
+              Water start assistido, primeiros metros navegando, controle de velocidade e direção. Todo
+              o equipamento incluído e suporte próximo.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="lang lang-en">Day 1 — Control & safety</h3>
+            <p class="lang lang-en">
+              Quick theory, gear setup, wind window, safety systems and first kite control on the beach.
+            </p>
+
+            <h3 class="lang lang-en">Day 2 — Body drag & water skills</h3>
+            <p class="lang lang-en">
+              Body drag in different directions, board recovery and spot reading to build real confidence.
+            </p>
+
+            <h3 class="lang lang-en">Day 3 — Water start & first rides</h3>
+            <p class="lang lang-en">
+              Assisted water start, first rides, speed and direction control. Full gear and close support.
+            </p>
+          </div>
+        </div>
+
+        <p class="center">
+          <span class="price">R$ 3.000</span><br />
+          <span class="lang lang-pt">3 dias · 3h por dia · 9h totais · Aula privada · Equipamento incluído.</span>
+          <span class="lang lang-en">3 days · 3h per day · 9h total · Private lessons · Equipment included.</span>
+        </p>
+
+        <div class="center">
+          <a href="https://wa.me/34616843816" target="_blank" rel="noopener" class="btn btn-whatsapp">
+            💬 <span class="lang lang-pt">Reservar no WhatsApp</span>
+            <span class="lang lang-en">Book on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="section section-light">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="lang lang-pt">Sobre a GoKiteJeri</span>
+          <span class="lang lang-en">About GoKiteJeri</span>
+        </h2>
+        <p class="lang lang-pt">
+          Escola local de kitesurf em Jericoacoara com foco em segurança, autenticidade e progresso real.
+          Trabalhamos com número limitado de alunos, atendimento próximo e equipamentos em dia. Instrutores
+          locais com experiência no vento de Jeri.
+        </p>
+        <p class="lang lang-en">
+          Local kitesurf school in Jericoacoara focused on safety, authenticity and real progression.
+          Limited students per coach, updated gear and instructors who truly know Jeri’s wind and lagoons.
+        </p>
+      </div>
+    </section>
+
+    <!-- TÉCNICAS (3 FOTOS NOVAS) -->
+    <section class="section section-light">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="lang lang-pt">Técnicas que você aprende no curso</span>
+          <span class="lang lang-en">Key techniques you learn in the course</span>
+        </h2>
+
+        <div class="cards-grid">
+          <!-- Study Pool -->
+          <article class="card">
+            <img src="assets/img/study-pool.jpg" alt="Aluno em posição de controle estável com o kite" class="card-img" />
+            <div class="card-body">
+              <h3 class="lang lang-pt">Study Pool — Controle estável</h3>
+              <h3 class="lang lang-en">Study Pool — Stable control</h3>
+              <p class="lang lang-pt">
+                Posição horizontal com vento nas costas, kite estável e barra a meia altura. Ajuda a sentir
+                a tração com controle total antes de avançar.
+              </p>
+              <p class="lang lang-en">
+                Horizontal position with wind on your back and a stable kite. Builds precise bar feeling
+                before the next steps.
+              </p>
+              <div class="card-actions">
+                <button class="btn btn-info btn-more" data-target="#detalhes-3dias">
+                  <span class="lang lang-pt">Mais informações</span>
+                  <span class="lang lang-en">More info</span>
+                </button>
+                <a href="https://wa.me/34616843816" target="_blank" rel="noopener" class="btn btn-whatsapp">
+                  <span class="lang lang-pt">Reservar</span>
+                  <span class="lang lang-en">Book now</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Body Drag -->
+          <article class="card">
+            <img src="assets/img/body-drag.jpg" alt="Aluno praticando body drag na água" class="card-img" />
+            <div class="card-body">
+              <h3 class="lang lang-pt">Body Drag — Segurança na água</h3>
+              <h3 class="lang lang-en">Body Drag — Water safety</h3>
+              <p class="lang lang-pt">
+                Deslize na água sem prancha só com o kite. Essencial para recuperar a prancha, ganhar
+                confiança e dominar o spot com segurança.
+              </p>
+              <p class="lang lang-en">
+                Glide through the water without the board. Key to board recovery, safety and real control
+                in open water.
+              </p>
+              <div class="card-actions">
+                <button class="btn btn-info btn-more" data-target="#detalhes-3dias">
+                  <span class="lang lang-pt">Mais informações</span>
+                  <span class="lang lang-en">More info</span>
+                </button>
+                <a href="https://wa.me/34616843816" target="_blank" rel="noopener" class="btn btn-whatsapp">
+                  <span class="lang lang-pt">Reservar</span>
+                  <span class="lang lang-en">Book now</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Water Start -->
+          <article class="card">
+            <img src="assets/img/water-start.jpg" alt="Aluno realizando o primeiro water start" class="card-img" />
+            <div class="card-body">
+              <h3 class="lang lang-pt">Water Start — Primeiros rides</h3>
+              <h3 class="lang lang-en">Water Start — First rides</h3>
+              <p class="lang lang-pt">
+                Combinação perfeita de kite e prancha para sair da água e começar a deslizar. Momento
+                mais emocionante do curso, sempre assistido de perto.
+              </p>
+              <p class="lang lang-en">
+                The step where everything connects: stand up, ride and control speed and direction with
+                close instructor support.
+              </p>
+              <div class="card-actions">
+                <button class="btn btn-info btn-more" data-target="#detalhes-3dias">
+                  <span class="lang lang-pt">Mais informações</span>
+                  <span class="lang lang-en">More info</span>
+                </button>
+                <a href="https://wa.me/34616843816" target="_blank" rel="noopener" class="btn btn-whatsapp">
+                  <span class="lang lang-pt">Reservar</span>
+                  <span class="lang lang-en">Book now</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BANNER CAPA -->
+    <section class="section banner-capa">
+      <div class="container">
+        <img src="assets/img/capa.jpg" alt="Informações de contato e idiomas da GoKiteJeri" />
+      </div>
+    </section>
+
+    <!-- CONTATO + MAPA -->
+    <section id="contato" class="section">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="lang lang-pt">Contato & Reservas</span>
+          <span class="lang lang-en">Contact & Bookings</span>
+        </h2>
+
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/34616843816" target="_blank" rel="noopener">+34 616 843 816</a></p>
+        <p><strong>Email:</strong> <a href="mailto:igorbizai@gmail.com">igorbizai@gmail.com</a></p>
+        <p><strong>Local:</strong> Jericoacoara, CE — Brasil</p>
+
+        <a href="https://wa.me/34616843816" target="_blank" rel="noopener" class="btn btn-whatsapp">
+          💬 <span class="lang lang-pt">Falar no WhatsApp</span>
+          <span class="lang lang-en">Chat on WhatsApp</span>
+        </a>
+
+        <h3 class="section-subtitle">
+          <span class="lang lang-pt">Onde estamos</span>
+          <span class="lang lang-en">Where we are</span>
+        </h3>
+
+        <div class="map-wrapper">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.546962993514!2d-40.512!3d-2.795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7e96f6f4f5f5f5f5%3AJericoacoara!5e0!3m2!1spt-BR!2sbr!4v0000000000"
+            width="100%" height="260" style="border:0;" allowfullscreen=""
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      © 2025 GoKiteJeri — Escola de Kitesurf em Jericoacoara
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
