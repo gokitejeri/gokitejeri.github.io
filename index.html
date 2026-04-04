@@ -17,9 +17,54 @@
   <meta property="og:image" content="https://gokitejeri.com/assets/img/hero.jpg" />
   <meta property="og:url" content="https://gokitejeri.com" />
   <meta property="og:type" content="website" />
+<link rel="stylesheet" href="styles.css" />
 
-  <link rel="stylesheet" href="styles.css" />
+<style>
+.cards-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;
+  margin-top:32px;
+}
+
+.card{
+  background:#fff;
+  border-radius:20px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.08);
+  overflow:hidden;
+}
+
+.card-body{
+  padding:24px;
+}
+
+.card-body h3{
+  margin-top:0;
+  margin-bottom:12px;
+}
+
+.card-body p{
+  margin-bottom:12px;
+}
+
+.center{
+  text-align:center;
+  margin-top:18px;
+}
+
+.btn-whatsapp{
+  display:inline-block;
+  background:#25D366;
+  color:#fff;
+  text-decoration:none;
+  padding:12px 22px;
+  border-radius:999px;
+  font-weight:600;
+}
+</style>
+
 </head>
+  
 <body>
   <!-- HEADER -->
   <header class="site-header">
