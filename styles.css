@@ -157,7 +157,17 @@ body {
   transition: all 0.18s ease;
   white-space: nowrap;
 }
+.info-images{
+display:grid;
+gap:32px;
+margin-top:32px;
+}
 
+.info-images img{
+width:100%;
+border-radius:22px;
+box-shadow:0 8px 24px rgba(0,0,0,0.08);
+}
 .btn-whatsapp {
   background: #22c55e;
   color: #ffffff;
