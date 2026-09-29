@@ -9,6 +9,23 @@
     gtag('js', new Date());
     gtag('config', 'AW-958541049');
   </script>
+  <!-- Event snippet for Clic WhatsApp conversion -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-958541049/_0oMCLGttMscEPnZiMkD',
+        'value': 1.0,
+        'currency': 'EUR',
+        'event_callback': callback
+      });
+      return false;
+    }
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -112,7 +129,7 @@
         </p>
 
         <div class="hero-actions">
-          <a class="btn btn-whatsapp" href="https://wa.me/34616843816" target="_blank" rel="noopener">
+          <a class="btn btn-whatsapp" href="https://wa.me/34616843816" target="_blank" rel="noopener" onclick="gtag_report_conversion()">
             💬 WhatsApp
           </a>
           <a class="btn btn-info" href="#aulas">
@@ -158,7 +175,7 @@
                   <span class="lang lang-pt">Mais informações</span>
                   <span class="lang lang-en">More info</span>
                 </button>
-                <a href="https://wa.me/34616843816" target="_blank" rel="noopener" class="btn btn-whatsapp">
+                <a href="https://wa.me/34616843816" target="_blank" rel="noopener" class="btn btn-whatsapp" onclick="gtag_report_conversion()">
                   <span class="lang lang-pt">Reservar</span>
                   <span class="lang lang-en">Book now</span>
                 </a>
@@ -185,7 +202,7 @@
                   <span class="lang lang-pt">Mais informações</span>
                   <span class="lang lang-en">More info</span>
                 </button>
-                <a href="https://wa.me/34616843816" target="_blank" rel="noopener" class="btn btn-whatsapp">
+                <a href="https://wa.me/34616843816" target="_blank" rel="noopener" class="btn btn-whatsapp" onclick="gtag_report_conversion()">
                   <span class="lang lang-pt">Reservar</span>
                   <span class="lang lang-en">Book now</span>
                 </a>
@@ -212,7 +229,7 @@
                   <span class="lang lang-pt">Mais informações</span>
                   <span class="lang lang-en">More info</span>
                 </button>
-                <a href="https://wa.me/34616843816" target="_blank" rel="noopener" class="btn btn-whatsapp">
+                <a href="https://wa.me/34616843816" target="_blank" rel="noopener" class="btn btn-whatsapp" onclick="gtag_report_conversion()">
                   <span class="lang lang-pt">Reservar</span>
                   <span class="lang lang-en">Book now</span>
                 </a>
@@ -284,7 +301,7 @@
         </p>
 
         <div class="center">
-          <a href="https://wa.me/34616843816" target="_blank" rel="noopener" class="btn btn-whatsapp">
+          <a href="https://wa.me/34616843816" target="_blank" rel="noopener" class="btn btn-whatsapp" onclick="gtag_report_conversion()">
             💬 <span class="lang lang-pt">Reservar no WhatsApp</span>
             <span class="lang lang-en">Book on WhatsApp</span>
           </a>
@@ -326,7 +343,7 @@ alt="Rotas de downwind em Jericoacoara">
           R$700 dia completo</p>
           <p><em>Disponível apenas para praticantes com autonomia.</em></p>
           <div class="center">
-            <a href="https://wa.me/34616843816?text=Quero%20saber%20valores%20do%20aluguel%20de%20material" target="_blank" rel="noopener" class="btn btn-whatsapp">Consultar no WhatsApp</a>
+            <a href="https://wa.me/34616843816?text=Quero%20saber%20valores%20do%20aluguel%20de%20material" target="_blank" rel="noopener" class="btn btn-whatsapp" onclick="gtag_report_conversion()">Consultar no WhatsApp</a>
           </div>
         </div>
       </div>
@@ -339,7 +356,7 @@ alt="Rotas de downwind em Jericoacoara">
           A partir de R$700 (grupo)</p>
           <p><em>Valores ajustados conforme número de pessoas e percurso.</em></p>
           <div class="center">
-            <a href="https://wa.me/34616843816?text=Quero%20informacoes%20sobre%20downwind%20em%20Jeri" target="_blank" rel="noopener" class="btn btn-whatsapp">Consultar disponibilidade</a>
+            <a href="https://wa.me/34616843816?text=Quero%20informacoes%20sobre%20downwind%20em%20Jeri" target="_blank" rel="noopener" class="btn btn-whatsapp" onclick="gtag_report_conversion()">Consultar disponibilidade</a>
           </div>
         </div>
       </div>
@@ -351,7 +368,7 @@ alt="Rotas de downwind em Jericoacoara">
           <p>Podemos orientar conforme o seu nível e estilo de navegação.</p>
           <p><strong>Valores sob consulta</strong></p>
           <div class="center">
-            <a href="https://wa.me/34616843816?text=Quero%20saber%20sobre%20material%20disponivel%20para%20compra" target="_blank" rel="noopener" class="btn btn-whatsapp">Falar no WhatsApp</a>
+            <a href="https://wa.me/34616843816?text=Quero%20saber%20sobre%20material%20disponivel%20para%20compra" target="_blank" rel="noopener" class="btn btn-whatsapp" onclick="gtag_report_conversion()">Falar no WhatsApp</a>
           </div>
         </div>
       </div>
@@ -406,7 +423,7 @@ alt="Rotas de downwind em Jericoacoara">
                   <span class="lang lang-pt">Mais informações</span>
                   <span class="lang lang-en">More info</span>
                 </button>
-                <a href="https://wa.me/34616843816" target="_blank" rel="noopener" class="btn btn-whatsapp">
+                <a href="https://wa.me/34616843816" target="_blank" rel="noopener" class="btn btn-whatsapp" onclick="gtag_report_conversion()">
                   <span class="lang lang-pt">Reservar</span>
                   <span class="lang lang-en">Book now</span>
                 </a>
@@ -435,7 +452,7 @@ alt="Rotas de downwind em Jericoacoara">
                   <span class="lang lang-pt">Mais informações</span>
                   <span class="lang lang-en">More info</span>
                 </button>
-                <a href="https://wa.me/34616843816" target="_blank" rel="noopener" class="btn btn-whatsapp">
+                <a href="https://wa.me/34616843816" target="_blank" rel="noopener" class="btn btn-whatsapp" onclick="gtag_report_conversion()">
                   <span class="lang lang-pt">Reservar</span>
                   <span class="lang lang-en">Book now</span>
                 </a>
@@ -464,7 +481,7 @@ alt="Rotas de downwind em Jericoacoara">
                   <span class="lang lang-pt">Mais informações</span>
                   <span class="lang lang-en">More info</span>
                 </button>
-                <a href="https://wa.me/34616843816" target="_blank" rel="noopener" class="btn btn-whatsapp">
+                <a href="https://wa.me/34616843816" target="_blank" rel="noopener" class="btn btn-whatsapp" onclick="gtag_report_conversion()">
                   <span class="lang lang-pt">Reservar</span>
                   <span class="lang lang-en">Book now</span>
                 </a>
@@ -508,11 +525,11 @@ alt="Rotas de downwind em Jericoacoara">
           <span class="lang lang-en">Contact & Bookings</span>
         </h2>
 
-        <p><strong>WhatsApp:</strong> <a href="https://wa.me/34616843816" target="_blank" rel="noopener">+34 616 843 816</a></p>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/34616843816" target="_blank" rel="noopener" onclick="gtag_report_conversion()">+34 616 843 816</a></p>
         <p><strong>Email:</strong> <a href="mailto:igorbizai@gmail.com">igorbizai@gmail.com</a></p>
         <p><strong>Local:</strong> Jericoacoara, CE — Brasil</p>
 
-        <a href="https://wa.me/34616843816" target="_blank" rel="noopener" class="btn btn-whatsapp">
+        <a href="https://wa.me/34616843816" target="_blank" rel="noopener" class="btn btn-whatsapp" onclick="gtag_report_conversion()">
           💬 <span class="lang lang-pt">Falar no WhatsApp</span>
           <span class="lang lang-en">Chat on WhatsApp</span>
         </a>
